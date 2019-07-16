@@ -326,9 +326,34 @@
                                                         "fields" : [
                                                                 {"name":"jitter-in"},
                                                                 {"name":"jitter-out"},
+                                                                {"name":"packet-late-arrivals"},
+                                                                {"name":"packet-out-of-sequence"},
                                                                 {"name":"packet-mia"},
                                                                 {"name":"packet-loss-ds"},
-                                                                {"name":"packet-loss-sd"}
+                                                                {"name":"packet-loss-sd"},
+                                                                {"name":"one-way-count"},
+                                                                {"name":"one-way-ds-max"},
+                                                                {"name":"one-way-ds-sum"},
+                                                                {"name":"one-way-ds-sum2"},
+                                                                {"name":"one-way-sd-max"},
+                                                                {"name":"one-way-sd-sum"},
+                                                                {"name":"one-way-sd-sum2"},
+                                                                {"name":"negative-ds-max"},
+                                                                {"name":"negative-ds-count"},
+                                                                {"name":"negative-ds-sum"},
+                                                                {"name":"negative-ds-sum2"},
+                                                                {"name":"negative-sd-max"},
+                                                                {"name":"negative-sd-count"},
+                                                                {"name":"negative-sd-sum"},
+                                                                {"name":"negative-sd-sum2"},
+                                                                {"name":"positive-ds-max"},
+                                                                {"name":"positive-ds-count"},
+                                                                {"name":"positive-ds-sum"},
+                                                                {"name":"positive-ds-sum2"},
+                                                                {"name":"positive-sd-max"},
+                                                                {"name":"positive-sd-count"},
+                                                                {"name":"positive-sd-sum"},
+                                                                {"name":"positive-sd-sum2"}
                                                         ]
                                                 }
                                         ]
@@ -362,9 +387,34 @@
                                                         "fields" : [
                                                                 {"name":"jitter-in"},
                                                                 {"name":"jitter-out"},
+                                                                {"name":"packet-late-arrivals"},
+                                                                {"name":"packet-out-of-sequence"},
                                                                 {"name":"packet-mia"},
                                                                 {"name":"packet-loss-ds"},
-                                                                {"name":"packet-loss-sd"}
+                                                                {"name":"packet-loss-sd"},
+                                                                {"name":"one-way-count"},
+                                                                {"name":"one-way-ds-max"},
+                                                                {"name":"one-way-ds-sum"},
+                                                                {"name":"one-way-ds-sum2"},
+                                                                {"name":"one-way-sd-max"},
+                                                                {"name":"one-way-sd-sum"},
+                                                                {"name":"one-way-sd-sum2"},
+                                                                {"name":"negative-ds-max"},
+                                                                {"name":"negative-ds-count"},
+                                                                {"name":"negative-ds-sum"},
+                                                                {"name":"negative-ds-sum2"},
+                                                                {"name":"negative-sd-max"},
+                                                                {"name":"negative-sd-count"},
+                                                                {"name":"negative-sd-sum"},
+                                                                {"name":"negative-sd-sum2"},
+                                                                {"name":"positive-ds-max"},
+                                                                {"name":"positive-ds-count"},
+                                                                {"name":"positive-ds-sum"},
+                                                                {"name":"positive-ds-sum2"},
+                                                                {"name":"positive-sd-max"},
+                                                                {"name":"positive-sd-count"},
+                                                                {"name":"positive-sd-sum"},
+                                                                {"name":"positive-sd-sum2"}
                                                         ]
                                                 }
                                         ]
@@ -399,9 +449,96 @@
                                                         "fields" : [
                                                                 {"name":"jitter-in"},
                                                                 {"name":"jitter-out"},
+                                                                {"name":"packet-late-arrivals"},
+                                                                {"name":"packet-out-of-sequence"},
                                                                 {"name":"packet-mia"},
                                                                 {"name":"packet-loss-ds"},
-                                                                {"name":"packet-loss-sd"}
+                                                                {"name":"packet-loss-sd"},
+                                                                {"name":"one-way-count"},
+                                                                {"name":"one-way-ds-max"},
+                                                                {"name":"one-way-ds-sum"},
+                                                                {"name":"one-way-ds-sum2"},
+                                                                {"name":"one-way-sd-max"},
+                                                                {"name":"one-way-sd-sum"},
+                                                                {"name":"one-way-sd-sum2"},
+                                                                {"name":"negative-ds-max"},
+                                                                {"name":"negative-ds-count"},
+                                                                {"name":"negative-ds-sum"},
+                                                                {"name":"negative-ds-sum2"},
+                                                                {"name":"negative-sd-max"},
+                                                                {"name":"negative-sd-count"},
+                                                                {"name":"negative-sd-sum"},
+                                                                {"name":"negative-sd-sum2"},
+                                                                {"name":"positive-ds-max"},
+                                                                {"name":"positive-ds-count"},
+                                                                {"name":"positive-ds-sum"},
+                                                                {"name":"positive-ds-sum2"},
+                                                                {"name":"positive-sd-max"},
+                                                                {"name":"positive-sd-count"},
+                                                                {"name":"positive-sd-sum"},
+                                                                {"name":"positive-sd-sum2"}
+                                                        ]
+                                                }
+                                        ]
+                                }
+                        ]
+                }
+        },
+        {
+                "basepath" : "Cisco-IOS-XR-man-ipsla-oper:ipsla/operation-data/operations/operation/statistics/aggregated/enhanced-intervals/enhanced-interval/start-times/start-time",
+                "spec" : {
+                        "fields" : [
+                                {"name":"operation-id", "tag": true},
+                                {"name":"enhanced-interval", "tag": true},
+                                {"name":"interval-start-time", "tag": true},
+                                {
+                                        "name":"common-stats",
+                                        "fields" : [
+                                                {"name":"busy-count"},
+                                                {"name":"disconnect-count"},
+                                                {"name":"dropped-count"},
+                                                {"name":"internal-error-count"},
+                                                {"name":"no-connection-count"},
+                                                {"name":"ok-count"}
+                                        ]
+                                },
+                                {
+                                        "name":"specific-stats",
+                                        "fields" : [
+                                                {"name":"op-type", "tag": true},
+                                                {
+                                                        "name":"udp-jitter-stats",
+                                                        "fields" : [
+                                                                {"name":"jitter-in"},
+                                                                {"name":"jitter-out"},
+                                                                {"name":"packet-late-arrivals"},
+                                                                {"name":"packet-out-of-sequence"},
+                                                                {"name":"packet-mia"},
+                                                                {"name":"packet-loss-ds"},
+                                                                {"name":"packet-loss-sd"},
+                                                                {"name":"one-way-count"},
+                                                                {"name":"one-way-ds-max"},
+                                                                {"name":"one-way-ds-sum"},
+                                                                {"name":"one-way-ds-sum2"},
+                                                                {"name":"one-way-sd-max"},
+                                                                {"name":"one-way-sd-sum"},
+                                                                {"name":"one-way-sd-sum2"},
+                                                                {"name":"negative-ds-max"},
+                                                                {"name":"negative-ds-count"},
+                                                                {"name":"negative-ds-sum"},
+                                                                {"name":"negative-ds-sum2"},
+                                                                {"name":"negative-sd-max"},
+                                                                {"name":"negative-sd-count"},
+                                                                {"name":"negative-sd-sum"},
+                                                                {"name":"negative-sd-sum2"},
+                                                                {"name":"positive-ds-max"},
+                                                                {"name":"positive-ds-count"},
+                                                                {"name":"positive-ds-sum"},
+                                                                {"name":"positive-ds-sum2"},
+                                                                {"name":"positive-sd-max"},
+                                                                {"name":"positive-sd-count"},
+                                                                {"name":"positive-sd-sum"},
+                                                                {"name":"positive-sd-sum2"}
                                                         ]
                                                 }
                                         ]
