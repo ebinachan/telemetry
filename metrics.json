@@ -1,4 +1,4 @@
-﻿[
+[
         {
                 "basepath" : "Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/generic-counters",
                 "spec" : {
@@ -15,6 +15,38 @@
                                 {"name" : "output-errors"},
                                 {"name" : "output-buffer-failures"},
                                 {"name" : "carrier-transitions"}
+                        ]
+                }
+        },
+        {
+                "basepath" : "Cisco-IOS-XR-asr9k-lpts-oper:platform-lptsp-ifib/nodes/node/police",
+                "spec" : {
+                        "fields" : [
+                                {"name":"node-name", "tag": true},
+                                {
+                                        "name":"police-info",
+                                        "fields" : [
+                                                {"name":"flow-type", "tag": true},
+                                                {"name":"accepted-stats"},
+                                                {"name":"dropped-stats"}
+                                        ]
+                                }
+                        ]
+                }
+        },
+        {
+                "basepath" : "Cisco-IOS-XR-asr9k-lpts-oper:platform-lptsp-ifib-static/node-statics/node-static/police",
+                "spec" : {
+                        "fields" : [
+                                {"name":"node-name", "tag": true},
+                                {
+                                        "name":"static-info",
+                                        "fields" : [
+                                                {"name":"punt-reason-string", "tag": true},
+                                                {"name":"accepted"},
+                                                {"name":"dropped"}
+                                        ]
+                                }
                         ]
                 }
         },
@@ -580,4 +612,5 @@
         }
 
 ]
+
 
