@@ -62,14 +62,23 @@
                                                         "name" : "basic-interface-stats",
                                                         "fields" : [
                                                                 {"name" : "bytes-received"},
-                                                                {"name" : "bytes-sent"}
+                                                                {"name" : "bytes-sent"},
+                                                                {"name" : "input-drops"},
+                                                                {"name" : "input-queue-drops"},
+                                                                {"name" : "output-drops"},
+                                                                {"name" : "output-queue-drops"}
                                                         ]
                                                 },
                                                 {
                                                         "name" : "full-interface-stats",
                                                         "fields" : [
                                                                 {"name" : "bytes-received"},
-                                                                {"name" : "bytes-sent"}
+                                                                {"name" : "bytes-sent"},
+                                                                {"name" : "input-drops"},
+                                                                {"name" : "input-queue-drops"},
+                                                                {"name" : "output-drops"},
+                                                                {"name" : "output-queue-drops"},
+                                                                {"name" : "output-buffer-failures"}
                                                         ]
                                                 }
                                         ]
