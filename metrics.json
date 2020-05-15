@@ -51,6 +51,33 @@
                 }
         },
         {
+                "basepath" : "Cisco-IOS-XR-pfi-im-cmd-oper:interfaces/interface-xr/interface",
+                "spec" : {
+                        "fields" : [
+                                {"name" : "interface-name", "tag" : true},
+                                {
+                                        "name":"interface-statistics",
+                                        "fields" : [
+                                                {
+                                                        "name" : "basic-interface-stats",
+                                                        "fields" : [
+                                                                {"name" : "bytes-received"},
+                                                                {"name" : "bytes-sent"}
+                                                        ]
+                                                },
+                                                {
+                                                        "name" : "full-interface-stats",
+                                                        "fields" : [
+                                                                {"name" : "bytes-received"},
+                                                                {"name" : "bytes-sent"}
+                                                        ]
+                                                }
+                                        ]
+                                }
+                        ]
+                }
+        },
+        {
                 "basepath" : "Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/data-rate",
                 "spec" : {
                         "fields" : [
