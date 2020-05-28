@@ -19,6 +19,7 @@ telemetry model-driven
   sensor-path Cisco-IOS-XR-controller-optics-oper:optics-oper/optics-ports/optics-port[name='Optics0/3/0/0']/optics-info
   sensor-path Cisco-IOS-XR-controller-optics-oper:optics-oper/optics-ports/optics-port[name='Optics0/3/0/1']/optics-info
   sensor-path Cisco-IOS-XR-controller-optics-oper:optics-oper/optics-ports/optics-port[name='Optics0/3/0/3']/optics-info
+  sensor-path Cisco-IOS-XR-pmengine-oper:performance-management/dwdm/dwdm-ports/dwdm-port[name='dwdm0/2/0/20/0']/dwdm-current/dwdm-minute15/dwdm-minute15-optics/dwdm-minute15-optic
  !
  sensor-group SG1MINS_GENERAL
   sensor-path Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization
