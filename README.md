@@ -1,6 +1,6 @@
 # telemetry
 
-Updated metrics.json for Cisco's telemetry collector, Pipeline.
+Updated metrics.json for Cisco's telemetry collector, Pipeline...
 
 Sample sensor list:
 
