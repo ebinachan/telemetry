@@ -28,6 +28,7 @@ telemetry model-driven
   sensor-path Cisco-IOS-XR-asr9k-np-oper:hardware-module-np/nodes/node/nps/np/load-utilization
   sensor-path Cisco-IOS-XR-asr9k-lpts-oper:platform-lptsp-ifib-static/node-statics/node-static/police/static-info
   sensor-path Cisco-IOS-XR-ip-rib-ipv4-oper:rib/vrfs/vrf[vrf-name='default']/afs/af/safs/saf/ip-rib-route-table-names/ip-rib-route-table-name/protocol/bgp/as/information
+  sensor-path Cisco-IOS-XR-ip-rib-ipv6-oper:ipv6-rib/vrfs/vrf[vrf-name='default']/afs/af/safs/saf/ip-rib-route-table-names/ip-rib-route-table-name/protocol/bgp/as/information
  !
  sensor-group SG1MINS_COUNTERS
   sensor-path Cisco-IOS-XR-pfi-im-cmd-oper:interfaces/interface-xr/interface[interface-name='Bundle-Ether1.109']
