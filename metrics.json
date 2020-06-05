@@ -1,5 +1,84 @@
 [
         {
+                "basepath" : "Cisco-IOS-XR-l2vpn-oper:l2vpnv2/nodes/node/bridge-domains/bridge-domain/bridge-acs/bridge-ac",
+                "spec" : {
+                        "fields" : [
+                                {"name" : "node-id", "tag" : true},
+                                {"name" : "bridge-domain-group-name", "tag" : true},
+                                {"name" : "bridge-domain-name", "tag" : true},
+                                {"name" : "interface-name", "tag" : true},
+                                {
+                                        "name" : "attachment-circuit",
+                                        "fields" : [
+                                                {
+                                                        "name" : "statistics",
+                                                        "fields" : [
+                                                                {
+                                                                        "name" : "impostion-stats",
+                                                                        "fields" : [
+                                                                                {
+                                                                                        "name" : "imposition-mtu-drop",
+                                                                                        "fields" : [
+                                                                                                {"name" : "packet-counts"}
+                                                                                        ]
+                                                                                }
+                                                                        ]
+                                                                },
+                                                                {
+                                                                        "name" : "dispostion-stats",
+                                                                        "fields" : [
+                                                                                {
+                                                                                        "name" : "mac-move",
+                                                                                        "fields" : [
+                                                                                                {"name" : "packet-counts"}
+                                                                                        ]
+                                                                                },
+                                                                                {
+                                                                                        "name" : "multicast-drop",
+                                                                                        "fields" : [
+                                                                                                {"name" : "packet-counts"}
+                                                                                        ]
+                                                                                },
+                                                                                {
+                                                                                        "name" : "unicast-drop",
+                                                                                        "fields" : [
+                                                                                                {"name" : "packet-counts"}
+                                                                                        ]
+                                                                                },
+                                                                                {
+                                                                                        "name" : "broadcast-drop",
+                                                                                        "fields" : [
+                                                                                                {"name" : "packet-counts"}
+                                                                                        ]
+                                                                                }
+                                                                        ]
+                                                                }
+                                                        ]
+                                                }
+                                        ]
+                                }
+                        ]
+                }
+        },
+        {
+                "basepath" : "Cisco-IOS-XR-ip-daps-oper:address-pool-service/nodes/node/pools/pool/allocated-addresses",
+                "spec" : {
+                        "fields" : [
+                                {"name":"node-name", "tag": true},
+                                {"name":"pool-name", "tag": true},
+                                {
+                                        "name":"pool-allocations",
+                                        "fields" : [
+                                                {"name":"vrf-name", "tag": true},
+                                                {"name":"used"},
+                                                {"name":"free"},
+                                                {"name":"utilization"}
+                                        ]
+                                }
+                        ]
+                }
+        },
+        {
                 "basepath" : "Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/generic-counters",
                 "spec" : {
                         "fields" : [
