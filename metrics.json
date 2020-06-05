@@ -1,9 +1,8 @@
 [
         {
-                "basepath" : "Cisco-IOS-XR-l2vpn-oper:l2vpnv2/nodes/node/bridge-domains/bridge-domain/bridge-acs/bridge-ac",
+                "basepath" : "Cisco-IOS-XR-l2vpn-oper:l2vpnv2/active/bridge-domains/bridge-domain/bridge-acs/bridge-ac",
                 "spec" : {
                         "fields" : [
-                                {"name" : "node-id", "tag" : true},
                                 {"name" : "bridge-domain-group-name", "tag" : true},
                                 {"name" : "bridge-domain-name", "tag" : true},
                                 {"name" : "interface-name", "tag" : true},
