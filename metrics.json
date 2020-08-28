@@ -97,6 +97,16 @@
                 }
         },
         {
+                "basepath" : "Cisco-IOS-XR-ipv4-igmp-oper:igmp/active/default-context/group-summary",
+                "spec" : {
+                        "fields" : [
+                                {"name" : "groutes"},
+                                {"name" : "sg-routes"},
+                                {"name" : "group-count"}
+                        ]
+                }
+        },
+        {
                 "basepath" : "Cisco-IOS-XR-asr9k-lpts-oper:platform-lptsp-ifib/nodes/node/police",
                 "spec" : {
                         "fields" : [
