@@ -28,6 +28,8 @@ telemetry model-driven
   sensor-path Cisco-IOS-XR-subscriber-pppoe-ma-oper:pppoe/nodes/node/summary-total
   sensor-path Cisco-IOS-XR-asr9k-lpts-oper:platform-lptsp-ifib/nodes/node/police/police-info
   sensor-path Cisco-IOS-XR-asr9k-np-oper:hardware-module-np/nodes/node/nps/np/load-utilization
+  sensor-path Cisco-IOS-XR-ipv4-pim-oper:pim/active/vrfs/vrf[vrf-name="default"]/summary
+  sensor-path Cisco-IOS-XR-ipv4-igmp-oper:igmp/active/vrfs/vrf[vrf-name="default"]/group-summary
   sensor-path Cisco-IOS-XR-ip-daps-oper:address-pool-service/nodes/node/pools/pool/allocated-addresses
   sensor-path Cisco-IOS-XR-asr9k-lpts-oper:platform-lptsp-ifib-static/node-statics/node-static/police/static-info
   sensor-path Cisco-IOS-XR-ip-rib-ipv4-oper:rib/vrfs/vrf[vrf-name='default']/afs/af/safs/saf/ip-rib-route-table-names/ip-rib-route-table-name/protocol/bgp/as/information
