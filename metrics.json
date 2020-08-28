@@ -97,12 +97,23 @@
                 }
         },
         {
-                "basepath" : "Cisco-IOS-XR-ipv4-igmp-oper:igmp/active/default-context/group-summary",
+                "basepath" : "Cisco-IOS-XR-ipv4-igmp-oper:igmp/active/vrfs/vrf/group-summary",
                 "spec" : {
                         "fields" : [
+                                {"name" : "vrf-name", "tag" : true},
                                 {"name" : "groutes"},
                                 {"name" : "sg-routes"},
                                 {"name" : "group-count"}
+                        ]
+                }
+        },
+        {
+                "basepath" : "Cisco-IOS-XR-ipv4-pim-oper:pim/active/vrfs/vrf/summary",
+                "spec" : {
+                        "fields" : [
+                                {"name" : "vrf-name", "tag" : true},
+                                {"name" : "route-count"},
+                                {"name" : "topology-interface-state-count"}
                         ]
                 }
         },
