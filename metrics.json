@@ -108,6 +108,18 @@
                 }
         },
         {
+                "basepath" : "Cisco-IOS-XR-ipv4-igmp-oper:igmp/active/vrfs/vrf/traffic-counters",
+                "spec" : {
+                        "fields" : [
+                                {"name" : "vrf-name", "tag" : true},
+                                {"name" : "input-queries"},
+                                {"name" : "input-reports"},
+                                {"name" : "input-leaves"},
+                                {"name" : "input-dvmrp"}
+                        ]
+                }
+        },
+        {
                 "basepath" : "Cisco-IOS-XR-ipv4-pim-oper:pim/active/vrfs/vrf/summary",
                 "spec" : {
                         "fields" : [
