@@ -26,6 +26,8 @@ telemetry model-driven
   sensor-path Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization
   sensor-path Cisco-IOS-XR-nto-misc-shmem-oper:memory-summary/nodes/node/summary
   sensor-path Cisco-IOS-XR-subscriber-pppoe-ma-oper:pppoe/nodes/node/summary-total
+  sensor-path Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/statistics-global
+  sensor-path Cisco-IOS-XR-asr9k-np-oper:hardware-module-np/nodes/node/nps/np/fast-drop
   sensor-path Cisco-IOS-XR-asr9k-lpts-oper:platform-lptsp-ifib/nodes/node/police/police-info
   sensor-path Cisco-IOS-XR-asr9k-np-oper:hardware-module-np/nodes/node/nps/np/load-utilization
   sensor-path Cisco-IOS-XR-ipv4-pim-oper:pim/active/vrfs/vrf[vrf-name="default"]/summary

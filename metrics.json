@@ -130,6 +130,61 @@
                 }
         },
         {
+                "basepath" : "Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/statistics-global",
+                "spec": {
+                        "fields": [
+                                {"name": "instance-name", "tag" : true},
+                                {
+                                        "name": "statistics",
+                                        "fields": [
+                                                {"name": "zero-holdtime-lsp-count"},
+                                                {"name": "invalid-checksum-lsp-count"},
+                                                {"name": "iih-dropped-count"},
+                                                {"name": "lsp-dropped-count"},
+                                                {"name": "snp-dropped-count"},
+                                                {"name": "pdu-queue-length"}
+                                        ]
+                                },
+                                {
+                                        "name": "per-area-data",
+                                        "fields": [
+                                                {"name": "level", "tag": true},
+                                                {
+                                                        "name": "statistics",
+                                                        "fields": [
+                                                                {"name": "system-lsp-build-count"},
+                                                                {"name": "system-lsp-refresh-count"}
+                                                        ]
+                                                },
+                                                {
+                                                        "name": "per-topology-data",
+                                                        "fields": [
+                                                                {
+                                                                        "name": "id",
+                                                                        "fields": [
+                                                                                {"name": "af-name", "tag": true},
+                                                                                {"name": "saf-name", "tag": true}
+                                                                        ]
+                                                                },
+                                                                {
+                                                                        "name": "statistics",
+                                                                        "fields": [
+                                                                                {"name": "spf-run-count"},
+                                                                                {"name": "ispf-run-count"},
+                                                                                {"name": "nhc-run-count"},
+                                                                                {"name": "prc-run-count"},
+                                                                                {"name": "periodic-run-count"}
+                                                                        ]
+                                                                }
+                                                        ]
+                                                }
+
+                                        ]
+                                }
+                        ]
+                }
+        },
+        {
                 "basepath" : "Cisco-IOS-XR-asr9k-lpts-oper:platform-lptsp-ifib/nodes/node/police",
                 "spec" : {
                         "fields" : [
