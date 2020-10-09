@@ -178,7 +178,6 @@
                                                                 }
                                                         ]
                                                 }
-
                                         ]
                                 }
                         ]
@@ -376,6 +375,22 @@
                                 {"name":"np-name", "tag": true},
                                 {"name":"packet-per-second-rate"},
                                 {"name":"utilization"}
+                        ]
+                }
+        },
+        {
+                "basepath" : "Cisco-IOS-XR-asr9k-np-oper:hardware-module-np/nodes/node/nps/np/fast-drop",
+                "spec" : {
+                        "fields" : [
+                                {"name":"node-name", "tag": true},
+                                {"name":"np-name", "tag": true},
+                                {
+                                        "name": "np-fast-drop",
+                                        "fields": [
+                                                {"name": "interface-name", "tag": true},
+                                                {"name": "counter-value"}
+                                        ]
+                                }
                         ]
                 }
         },
