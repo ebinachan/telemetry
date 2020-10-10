@@ -1,833 +1,1608 @@
 [
-        {
-                "basepath" : "Cisco-IOS-XR-l2vpn-oper:l2vpnv2/active/bridge-domains/bridge-domain/bridge-acs/bridge-ac",
-                "spec" : {
-                        "fields" : [
-                                {"name" : "bridge-domain-group-name", "tag" : true},
-                                {"name" : "bridge-domain-name", "tag" : true},
-                                {"name" : "interface-name", "tag" : true},
+    {
+        "basepath": "Cisco-IOS-XR-l2vpn-oper:l2vpnv2/active/bridge-domains/bridge-domain/bridge-acs/bridge-ac",
+        "spec": {
+            "fields": [
+                {
+                    "name": "bridge-domain-group-name",
+                    "tag": true
+                },
+                {
+                    "name": "bridge-domain-name",
+                    "tag": true
+                },
+                {
+                    "name": "interface-name",
+                    "tag": true
+                },
+                {
+                    "name": "attachment-circuit",
+                    "fields": [
+                        {
+                            "name": "statistics",
+                            "fields": [
                                 {
-                                        "name" : "attachment-circuit",
-                                        "fields" : [
+                                    "name": "impostion-stats",
+                                    "fields": [
+                                        {
+                                            "name": "imposition-mtu-drop",
+                                            "fields": [
                                                 {
-                                                        "name" : "statistics",
-                                                        "fields" : [
-                                                                {
-                                                                        "name" : "impostion-stats",
-                                                                        "fields" : [
-                                                                                {
-                                                                                        "name" : "imposition-mtu-drop",
-                                                                                        "fields" : [
-                                                                                                {"name" : "packet-counts"}
-                                                                                        ]
-                                                                                }
-                                                                        ]
-                                                                },
-                                                                {
-                                                                        "name" : "dispostion-stats",
-                                                                        "fields" : [
-                                                                                {
-                                                                                        "name" : "mac-move",
-                                                                                        "fields" : [
-                                                                                                {"name" : "packet-counts"}
-                                                                                        ]
-                                                                                },
-                                                                                {
-                                                                                        "name" : "multicast-drop",
-                                                                                        "fields" : [
-                                                                                                {"name" : "packet-counts"}
-                                                                                        ]
-                                                                                },
-                                                                                {
-                                                                                        "name" : "unicast-drop",
-                                                                                        "fields" : [
-                                                                                                {"name" : "packet-counts"}
-                                                                                        ]
-                                                                                },
-                                                                                {
-                                                                                        "name" : "broadcast-drop",
-                                                                                        "fields" : [
-                                                                                                {"name" : "packet-counts"}
-                                                                                        ]
-                                                                                }
-                                                                        ]
-                                                                }
-                                                        ]
+                                                    "name": "packet-counts"
                                                 }
-                                        ]
-                                }
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-ip-daps-oper:address-pool-service/nodes/node/pools/pool/allocated-addresses",
-                "spec" : {
-                        "fields" : [
-                                {"name":"node-name", "tag": true},
-                                {"name":"pool-name", "tag": true},
-                                {
-                                        "name":"pool-allocations",
-                                        "fields" : [
-                                                {"name":"vrf-name", "tag": true},
-                                                {"name":"used"},
-                                                {"name":"free"},
-                                                {"name":"utilization"}
-                                        ]
-                                }
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/generic-counters",
-                "spec" : {
-                        "fields" : [
-                                {"name" : "interface-name", "tag" : true},
-                                {"name" : "output-drops"},
-                                {"name" : "output-queue-drops"},
-                                {"name" : "input-drops"},
-                                {"name" : "input-queue-drops"},
-                                {"name" : "input-errors"},
-                                {"name" : "input-overruns"},
-                                {"name" : "crc-errors"},
-                                {"name" : "input-ignored-packets"},
-                                {"name" : "output-errors"},
-                                {"name" : "output-buffer-failures"},
-                                {"name" : "carrier-transitions"}
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-ipv4-igmp-oper:igmp/active/vrfs/vrf/group-summary",
-                "spec" : {
-                        "fields" : [
-                                {"name" : "vrf-name", "tag" : true},
-                                {"name" : "groutes"},
-                                {"name" : "sg-routes"},
-                                {"name" : "group-count"}
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-ipv4-igmp-oper:igmp/active/vrfs/vrf/traffic-counters",
-                "spec" : {
-                        "fields" : [
-                                {"name" : "vrf-name", "tag" : true},
-                                {"name" : "input-queries"},
-                                {"name" : "input-reports"},
-                                {"name" : "input-leaves"},
-                                {"name" : "input-dvmrp"}
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-ipv4-pim-oper:pim/active/vrfs/vrf/summary",
-                "spec" : {
-                        "fields" : [
-                                {"name" : "vrf-name", "tag" : true},
-                                {"name" : "route-count"},
-                                {"name" : "topology-interface-state-count"}
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/statistics-global",
-                "spec": {
-                        "fields": [
-                                {"name": "instance-name", "tag" : true},
-                                {
-                                        "name": "statistics",
-                                        "fields": [
-                                                {"name": "zero-holdtime-lsp-count"},
-                                                {"name": "invalid-checksum-lsp-count"},
-                                                {"name": "iih-dropped-count"},
-                                                {"name": "lsp-dropped-count"},
-                                                {"name": "snp-dropped-count"},
-                                                {"name": "pdu-queue-length"}
-                                        ]
+                                            ]
+                                        }
+                                    ]
                                 },
                                 {
-                                        "name": "per-area-data",
-                                        "fields": [
-                                                {"name": "level", "tag": true},
+                                    "name": "dispostion-stats",
+                                    "fields": [
+                                        {
+                                            "name": "mac-move",
+                                            "fields": [
                                                 {
-                                                        "name": "statistics",
-                                                        "fields": [
-                                                                {"name": "system-lsp-build-count"},
-                                                                {"name": "system-lsp-refresh-count"}
-                                                        ]
-                                                },
-                                                {
-                                                        "name": "per-topology-data",
-                                                        "fields": [
-                                                                {
-                                                                        "name": "id",
-                                                                        "fields": [
-                                                                                {"name": "af-name", "tag": true},
-                                                                                {"name": "saf-name", "tag": true}
-                                                                        ]
-                                                                },
-                                                                {
-                                                                        "name": "statistics",
-                                                                        "fields": [
-                                                                                {"name": "spf-run-count"},
-                                                                                {"name": "ispf-run-count"},
-                                                                                {"name": "nhc-run-count"},
-                                                                                {"name": "prc-run-count"},
-                                                                                {"name": "periodic-run-count"}
-                                                                        ]
-                                                                }
-                                                        ]
+                                                    "name": "packet-counts"
                                                 }
-                                        ]
-                                }
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-asr9k-lpts-oper:platform-lptsp-ifib/nodes/node/police",
-                "spec" : {
-                        "fields" : [
-                                {"name":"node-name", "tag": true},
-                                {
-                                        "name":"police-info",
-                                        "fields" : [
-                                                {"name":"flow-type", "tag": true},
-                                                {"name":"accepted-stats"},
-                                                {"name":"dropped-stats"}
-                                        ]
-                                }
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-asr9k-lpts-oper:platform-lptsp-ifib-static/node-statics/node-static/police",
-                "spec" : {
-                        "fields" : [
-                                {"name":"node-name", "tag": true},
-                                {
-                                        "name":"static-info",
-                                        "fields" : [
-                                                {"name":"punt-reason-string", "tag": true},
-                                                {"name":"accepted"},
-                                                {"name":"dropped"}
-                                        ]
-                                }
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-pfi-im-cmd-oper:interfaces/interface-xr/interface",
-                "spec" : {
-                        "fields" : [
-                                {"name" : "interface-name", "tag" : true},
-                                {
-                                        "name":"interface-statistics",
-                                        "fields" : [
+                                            ]
+                                        },
+                                        {
+                                            "name": "multicast-drop",
+                                            "fields": [
                                                 {
-                                                        "name" : "basic-interface-stats",
-                                                        "fields" : [
-                                                                {"name" : "bytes-received"},
-                                                                {"name" : "bytes-sent"},
-                                                                {"name" : "input-drops"},
-                                                                {"name" : "input-queue-drops"},
-                                                                {"name" : "output-drops"},
-                                                                {"name" : "output-queue-drops"}
-                                                        ]
-                                                },
-                                                {
-                                                        "name" : "full-interface-stats",
-                                                        "fields" : [
-                                                                {"name" : "bytes-received"},
-                                                                {"name" : "bytes-sent"},
-                                                                {"name" : "input-drops"},
-                                                                {"name" : "input-queue-drops"},
-                                                                {"name" : "output-drops"},
-                                                                {"name" : "output-queue-drops"},
-                                                                {"name" : "output-buffer-failures"}
-                                                        ]
+                                                    "name": "packet-counts"
                                                 }
-                                        ]
-                                }
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/data-rate",
-                "spec" : {
-                        "fields" : [
-                                {"name" : "interface-name", "tag" : true},
-                                {"name" : "input-data-rate"},
-                                {"name" : "output-data-rate"},
-                                {"name" : "input-packet-rate"},
-                                {"name" : "output-packet-rate"}
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-asr9k-sc-envmon-oper:environmental-monitoring/racks/rack/slots/slot/modules/module/sensor-types/sensor-type/sensor-names/sensor-name/value-detailed",
-                "spec" : {
-                        "fields" : [
-                                {"name" : "module", "tag" : true},
-                                {"name" : "name", "tag": true},
-                                {"name" : "slot", "tag": true},
-                                {"name" : "type", "tag": true},
-                                {"name" : "value"}
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/output/service-policy-names/service-policy-instance/statistics",
-                "spec" : {
-                        "fields" : [
-                                {"name" : "interface-name", "tag" : true},
-                                {"name" : "service-policy-name", "tag" : true},
-                                {
-                                        "name" : "class-stats",
-                                        "fields" : [
-                                                {"name" : "class-name", "tag" : true},
+                                            ]
+                                        },
+                                        {
+                                            "name": "unicast-drop",
+                                            "fields": [
                                                 {
-                                                        "name" : "general-stats",
-                                                        "fields" : [
-                                                                {"name" : "total-drop-rate"},
-                                                                {"name" : "total-transmit-rate"}
-                                                        ]
-                                                },
-                                                {
-                                                        "name" : "queue-stats-array",
-                                                        "fields" : [
-                                                                {"name" : "queue-id", "tag" : true},
-                                                                {"name" : "tail-drop-packets"},
-                                                                {
-                                                                        "name" : "queue-instance-length",
-                                                                        "fields" : [
-                                                                                {"name" : "value"},
-                                                                                {"name" : "unit", "tag" : true}
-                                                                        ]
-                                                                },
-                                                                {"name" : "random-drop-packets"},
-                                                                {"name" : "conform-packets"},
-                                                                {"name" : "exceed-packets"}
-                                                        ]
+                                                    "name": "packet-counts"
                                                 }
-                                        ]
-                                }
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/input/service-policy-names/service-policy-instance/statistics",
-                "spec" : {
-                        "fields" : [
-                                {"name" : "interface-name", "tag" : true},
-                                {"name" : "service-policy-name", "tag" : true},
-                                {
-                                        "name" : "class-stats",
-                                        "fields" : [
-                                                {"name" : "class-name", "tag" : true},
+                                            ]
+                                        },
+                                        {
+                                            "name": "broadcast-drop",
+                                            "fields": [
                                                 {
-                                                        "name" : "general-stats",
-                                                        "fields" : [
-                                                                {"name" : "match-data-rate"}
-                                                        ]
+                                                    "name": "packet-counts"
                                                 }
-                                        ]
+                                            ]
+                                        }
+                                    ]
                                 }
-                        ]
+                            ]
+                        }
+                    ]
                 }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-procmem-oper:processes-memory/nodes/node/process-ids/process-id",
-                "spec" : {
-                        "fields" : [
-                                {"name":"node-name", "tag": true},
-                                {"name":"name", "tag": true},
-                                {"name":"text-seg-size"},
-                                {"name":"data-seg-size"},
-                                {"name":"stack-seg-size"},
-                                {"name":"malloc-size"}
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-nto-misc-shmem-oper:memory-summary/nodes/node/summary",
-                "spec" : {
-                        "fields" : [
-                                {"name":"node-name", "tag": true},
-                                {"name":"system-ram-memory"},
-                                {"name":"free-application-memory"}
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization",
-                "spec" : {
-                        "fields" : [
-                                {"name":"node-name", "tag": true},
-                                {"name":"total-cpu-one-minute"}
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-asr9k-np-oper:hardware-module-np/nodes/node/nps/np/load-utilization",
-                "spec" : {
-                        "fields" : [
-                                {"name":"node-name", "tag": true},
-                                {"name":"np-name", "tag": true},
-                                {"name":"packet-per-second-rate"},
-                                {"name":"utilization"}
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-asr9k-np-oper:hardware-module-np/nodes/node/nps/np/fast-drop",
-                "spec" : {
-                        "fields" : [
-                                {"name":"node-name", "tag": true},
-                                {"name":"np-name", "tag": true},
-                                {
-                                        "name": "np-fast-drop",
-                                        "fields": [
-                                                {"name": "interface-name", "tag": true},
-                                                {"name": "counter-value"}
-                                        ]
-                                }
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-subscriber-pppoe-ma-oper:pppoe/access-interface-statistics/access-interface-statistic",
-                "spec" : {
-                        "fields" : [
-                                {"name":"interface-name", "tag" : true},
-                                {
-                                        "name":"packet-counts",
-                                        "fields" : [
-                                                {
-                                                        "name" : "padi",
-                                                        "fields" : [
-                                                                {"name":"dropped"},
-                                                                {"name":"received"},
-                                                                {"name":"sent"}
-                                                        ]
-                                                },
-                                                {
-                                                        "name" : "pado",
-                                                        "fields" : [
-                                                                {"name":"dropped"},
-                                                                {"name":"received"},
-                                                                {"name":"sent"}
-                                                        ]
-                                                },
-                                                {
-                                                        "name" : "padr",
-                                                        "fields" : [
-                                                                {"name":"dropped"},
-                                                                {"name":"received"},
-                                                                {"name":"sent"}
-                                                        ]
-                                                },
-                                                {
-                                                        "name" : "pads-success",
-                                                        "fields" : [
-                                                                {"name":"dropped"},
-                                                                {"name":"received"},
-                                                                {"name":"sent"}
-                                                        ]
-                                                },
-                                                {
-                                                        "name" : "pads-error",
-                                                        "fields" : [
-                                                                {"name":"dropped"},
-                                                                {"name":"received"},
-                                                                {"name":"sent"}
-                                                        ]
-                                                },
-                                                {
-                                                        "name" : "padt",
-                                                        "fields" : [
-                                                                {"name":"dropped"},
-                                                                {"name":"received"},
-                                                                {"name":"sent"}
-                                                        ]
-                                                }
-
-                                        ]
-                                }
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-subscriber-pppoe-ma-oper:pppoe/nodes/node/summary-total",
-                "spec" : {
-                        "fields" : [
-                                {"name":"node-name", "tag": true},
-                                {"name":"complete-sessions"},
-                                {"name":"flow-control-disconnected-sessions"},
-                                {"name":"flow-control-dropped-sessions"},
-                                {"name":"flow-control-in-flight-sessions"}
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-subscriber-pppoe-ma-oper:pppoe/nodes/node/access-interface/summaries/summary",
-                "spec" : {
-                        "fields" : [
-                                {"name":"node-name", "tag": true},
-                                {"name":"interface-name", "tag" : true},
-                                {"name":"incomplete-sessions"},
-                                {"name":"sessions"}
-                                
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-ip-rib-ipv4-oper:rib/vrfs/vrf/afs/af/safs/saf/ip-rib-route-table-names/ip-rib-route-table-name/protocol/bgp/as/information",
-                "spec" : {
-                        "fields" : [
-                                {"name":"af-name", "tag": true},
-                                {"name":"saf-name", "tag": true},
-                                {"name":"protocol-route-memory"},
-                                {"name":"routes-counts"}
-                                
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-ip-rib-ipv6-oper:ipv6-rib/vrfs/vrf/afs/af/safs/saf/ip-rib-route-table-names/ip-rib-route-table-name/protocol/bgp/as/information",
-                "spec" : {
-                        "fields" : [
-                                {"name":"af-name", "tag": true},
-                                {"name":"saf-name", "tag": true},
-                                {"name":"protocol-route-memory"},
-                                {"name":"routes-counts"}
-
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-controller-optics-oper:optics-oper/optics-ports/optics-port/optics-info",
-                "spec" : {
-                        "fields" : [
-                                {"name":"name", "tag": true},
-                                {"name":"laser-state", "tag": true},
-                                {"name":"grey-wavelength"},
-                                {"name":"rx-low-threshold"},
-                                {"name":"rx-low-warning-threshold"},
-                                {"name":"temperature"},
-                                {"name":"voltage"},
-                                {
-                                        "name":"lane-data",
-                                        "fields" : [
-                                                {"name":"lane-index", "tag": true},
-                                                {"name":"laser-bias-current-milli-amps"},
-                                                {"name":"receive-power"},
-                                                {"name":"transmit-power"}
-                                        ]
-                                }
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-dwdm-ui-oper:dwdm/ports/port/info",
-                "spec" : {
-                        "fields" : [
-                                {"name":"name", "tag": true},
-                                {
-                                        "name":"g709-info",
-                                        "fields" : [
-                                                {"name":"uc"},
-                                                {"name":"ec"}
-                                        ]
-                                },
-                                {
-                                        "name":"optics-info",
-                                        "fields" : [
-                                                {"name":"receive-power"},
-                                                {"name":"transmit-power"},
-                                                {"name":"wave-channel"}
-                                        ]
-                                }
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-man-ipsla-oper:ipsla/operation-data/operations/operation/statistics/latest/target",
-                "spec" : {
-                        "fields" : [
-                                {"name":"operation-id", "tag": true},
-                                {
-                                        "name":"common-stats",
-                                        "fields" : [
-                                                {"name":"busy-count"},
-                                                {"name":"disconnect-count"},
-                                                {"name":"dropped-count"},
-                                                {"name":"internal-error-count"},
-                                                {"name":"no-connection-count"},
-                                                {"name":"ok-count"}
-                                        ]
-                                },
-                                {
-                                        "name":"specific-stats",
-                                        "fields" : [
-                                                {"name":"op-type", "tag": true},
-                                                {       
-                                                        "name":"udp-jitter-stats",
-                                                        "fields" : [
-                                                                {"name":"jitter-in"},
-                                                                {"name":"jitter-out"},
-                                                                {"name":"packet-late-arrivals"},
-                                                                {"name":"packet-out-of-sequence"},
-                                                                {"name":"packet-mia"},
-                                                                {"name":"packet-loss-ds"},
-                                                                {"name":"packet-loss-sd"},
-                                                                {"name":"one-way-count"},
-                                                                {"name":"one-way-ds-max"},
-                                                                {"name":"one-way-ds-sum"},
-                                                                {"name":"one-way-ds-sum2"},
-                                                                {"name":"one-way-sd-max"},
-                                                                {"name":"one-way-sd-sum"},
-                                                                {"name":"one-way-sd-sum2"},
-                                                                {"name":"negative-ds-max"},
-                                                                {"name":"negative-ds-count"},
-                                                                {"name":"negative-ds-sum"},
-                                                                {"name":"negative-ds-sum2"},
-                                                                {"name":"negative-sd-max"},
-                                                                {"name":"negative-sd-count"},
-                                                                {"name":"negative-sd-sum"},
-                                                                {"name":"negative-sd-sum2"},
-                                                                {"name":"positive-ds-max"},
-                                                                {"name":"positive-ds-count"},
-                                                                {"name":"positive-ds-sum"},
-                                                                {"name":"positive-ds-sum2"},
-                                                                {"name":"positive-sd-max"},
-                                                                {"name":"positive-sd-count"},
-                                                                {"name":"positive-sd-sum"},
-                                                                {"name":"positive-sd-sum2"}
-                                                        ]
-                                                }
-                                        ]
-                                }
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-man-ipsla-oper:ipsla/operation-data/operations/operation/statistics/aggregated/hours/hour/non-distributed/target",
-                "spec" : {
-                        "fields" : [
-                                {"name":"operation-id", "tag": true},
-                                {"name":"hour-index", "tag": true},
-                                {
-                                        "name":"common-stats",
-                                        "fields" : [
-                                                {"name":"busy-count"},
-                                                {"name":"disconnect-count"},
-                                                {"name":"dropped-count"},
-                                                {"name":"internal-error-count"},
-                                                {"name":"no-connection-count"},
-                                                {"name":"ok-count"}
-                                        ]
-                                },
-                                {
-                                        "name":"specific-stats",
-                                        "fields" : [
-                                                {"name":"op-type", "tag": true},
-                                                {
-                                                        "name":"udp-jitter-stats",
-                                                        "fields" : [
-                                                                {"name":"jitter-in"},
-                                                                {"name":"jitter-out"},
-                                                                {"name":"packet-late-arrivals"},
-                                                                {"name":"packet-out-of-sequence"},
-                                                                {"name":"packet-mia"},
-                                                                {"name":"packet-loss-ds"},
-                                                                {"name":"packet-loss-sd"},
-                                                                {"name":"one-way-count"},
-                                                                {"name":"one-way-ds-max"},
-                                                                {"name":"one-way-ds-sum"},
-                                                                {"name":"one-way-ds-sum2"},
-                                                                {"name":"one-way-sd-max"},
-                                                                {"name":"one-way-sd-sum"},
-                                                                {"name":"one-way-sd-sum2"},
-                                                                {"name":"negative-ds-max"},
-                                                                {"name":"negative-ds-count"},
-                                                                {"name":"negative-ds-sum"},
-                                                                {"name":"negative-ds-sum2"},
-                                                                {"name":"negative-sd-max"},
-                                                                {"name":"negative-sd-count"},
-                                                                {"name":"negative-sd-sum"},
-                                                                {"name":"negative-sd-sum2"},
-                                                                {"name":"positive-ds-max"},
-                                                                {"name":"positive-ds-count"},
-                                                                {"name":"positive-ds-sum"},
-                                                                {"name":"positive-ds-sum2"},
-                                                                {"name":"positive-sd-max"},
-                                                                {"name":"positive-sd-count"},
-                                                                {"name":"positive-sd-sum"},
-                                                                {"name":"positive-sd-sum2"}
-                                                        ]
-                                                }
-                                        ]
-                                }
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-man-ipsla-oper:ipsla/operation-data/operations/operation/statistics/aggregated/hours/hour/distributed/target/distribution-intervals/distribution-interval",
-                "spec" : {
-                        "fields" : [
-                                {"name":"operation-id", "tag": true},
-                                {"name":"hour-index", "tag": true},
-                                {"name":"distribution-index", "tag": true},
-                                {
-                                        "name":"common-stats",
-                                        "fields" : [
-                                                {"name":"busy-count"},
-                                                {"name":"disconnect-count"},
-                                                {"name":"dropped-count"},
-                                                {"name":"internal-error-count"},
-                                                {"name":"no-connection-count"},
-                                                {"name":"ok-count"}
-                                        ]
-                                },
-                                {
-                                        "name":"specific-stats",
-                                        "fields" : [
-                                                {"name":"op-type", "tag": true},
-                                                {
-                                                        "name":"udp-jitter-stats",
-                                                        "fields" : [
-                                                                {"name":"jitter-in"},
-                                                                {"name":"jitter-out"},
-                                                                {"name":"packet-late-arrivals"},
-                                                                {"name":"packet-out-of-sequence"},
-                                                                {"name":"packet-mia"},
-                                                                {"name":"packet-loss-ds"},
-                                                                {"name":"packet-loss-sd"},
-                                                                {"name":"one-way-count"},
-                                                                {"name":"one-way-ds-max"},
-                                                                {"name":"one-way-ds-sum"},
-                                                                {"name":"one-way-ds-sum2"},
-                                                                {"name":"one-way-sd-max"},
-                                                                {"name":"one-way-sd-sum"},
-                                                                {"name":"one-way-sd-sum2"},
-                                                                {"name":"negative-ds-max"},
-                                                                {"name":"negative-ds-count"},
-                                                                {"name":"negative-ds-sum"},
-                                                                {"name":"negative-ds-sum2"},
-                                                                {"name":"negative-sd-max"},
-                                                                {"name":"negative-sd-count"},
-                                                                {"name":"negative-sd-sum"},
-                                                                {"name":"negative-sd-sum2"},
-                                                                {"name":"positive-ds-max"},
-                                                                {"name":"positive-ds-count"},
-                                                                {"name":"positive-ds-sum"},
-                                                                {"name":"positive-ds-sum2"},
-                                                                {"name":"positive-sd-max"},
-                                                                {"name":"positive-sd-count"},
-                                                                {"name":"positive-sd-sum"},
-                                                                {"name":"positive-sd-sum2"}
-                                                        ]
-                                                }
-                                        ]
-                                }
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-man-ipsla-oper:ipsla/operation-data/operations/operation/statistics/aggregated/enhanced-intervals/enhanced-interval/start-times/start-time",
-                "spec" : {
-                        "fields" : [
-                                {"name":"operation-id", "tag": true},
-                                {"name":"enhanced-interval", "tag": true},
-                                {"name":"interval-start-time", "tag": true},
-                                {
-                                        "name":"common-stats",
-                                        "fields" : [
-                                                {"name":"busy-count"},
-                                                {"name":"disconnect-count"},
-                                                {"name":"dropped-count"},
-                                                {"name":"internal-error-count"},
-                                                {"name":"no-connection-count"},
-                                                {"name":"ok-count"}
-                                        ]
-                                },
-                                {
-                                        "name":"specific-stats",
-                                        "fields" : [
-                                                {"name":"op-type", "tag": true},
-                                                {
-                                                        "name":"udp-jitter-stats",
-                                                        "fields" : [
-                                                                {"name":"jitter-in"},
-                                                                {"name":"jitter-out"},
-                                                                {"name":"packet-late-arrivals"},
-                                                                {"name":"packet-out-of-sequence"},
-                                                                {"name":"packet-mia"},
-                                                                {"name":"packet-loss-ds"},
-                                                                {"name":"packet-loss-sd"},
-                                                                {"name":"one-way-count"},
-                                                                {"name":"one-way-ds-max"},
-                                                                {"name":"one-way-ds-sum"},
-                                                                {"name":"one-way-ds-sum2"},
-                                                                {"name":"one-way-sd-max"},
-                                                                {"name":"one-way-sd-sum"},
-                                                                {"name":"one-way-sd-sum2"},
-                                                                {"name":"negative-ds-max"},
-                                                                {"name":"negative-ds-count"},
-                                                                {"name":"negative-ds-sum"},
-                                                                {"name":"negative-ds-sum2"},
-                                                                {"name":"negative-sd-max"},
-                                                                {"name":"negative-sd-count"},
-                                                                {"name":"negative-sd-sum"},
-                                                                {"name":"negative-sd-sum2"},
-                                                                {"name":"positive-ds-max"},
-                                                                {"name":"positive-ds-count"},
-                                                                {"name":"positive-ds-sum"},
-                                                                {"name":"positive-ds-sum2"},
-                                                                {"name":"positive-sd-max"},
-                                                                {"name":"positive-sd-count"},
-                                                                {"name":"positive-sd-sum"},
-                                                                {"name":"positive-sd-sum2"}
-                                                        ]
-                                                }
-                                        ]
-                                }
-                        ]
-                }
-        },
-        {
-                "basepath" : "Cisco-IOS-XR-pmengine-oper:performance-management/dwdm/dwdm-ports/dwdm-port/dwdm-current/dwdm-minute15/dwdm-minute15-optics/dwdm-minute15-optic",
-                "spec" : {
-                        "fields" : [
-                                {"name":"name", "tag": true},
-                                {
-                                        "name":"osnr",
-                                        "fields" : [
-                                                {"name":"average"},
-                                                {"name":"maximum"},
-                                                {"name":"minimum"}
-                                        ]
-                                },
-                                {
-                                        "name":"cd",
-                                        "fields" : [
-                                                {"name":"average"},
-                                                {"name":"maximum"},
-                                                {"name":"minimum"}
-                                        ]
-                                },
-                                {
-                                        "name":"dgd",
-                                        "fields" : [
-                                                {"name":"average"},
-                                                {"name":"maximum"},
-                                                {"name":"minimum"}
-                                        ]
-                                }       
-                        ]
-                }
+            ]
         }
-
+    },
+    {
+        "basepath": "Cisco-IOS-XR-ip-daps-oper:address-pool-service/nodes/node/pools/pool/allocated-addresses",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "pool-name",
+                    "tag": true
+                },
+                {
+                    "name": "pool-allocations",
+                    "fields": [
+                        {
+                            "name": "vrf-name",
+                            "tag": true
+                        },
+                        {
+                            "name": "used"
+                        },
+                        {
+                            "name": "free"
+                        },
+                        {
+                            "name": "utilization"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/generic-counters",
+        "spec": {
+            "fields": [
+                {
+                    "name": "interface-name",
+                    "tag": true
+                },
+                {
+                    "name": "output-drops"
+                },
+                {
+                    "name": "output-queue-drops"
+                },
+                {
+                    "name": "input-drops"
+                },
+                {
+                    "name": "input-queue-drops"
+                },
+                {
+                    "name": "input-errors"
+                },
+                {
+                    "name": "input-overruns"
+                },
+                {
+                    "name": "crc-errors"
+                },
+                {
+                    "name": "input-ignored-packets"
+                },
+                {
+                    "name": "output-errors"
+                },
+                {
+                    "name": "output-buffer-failures"
+                },
+                {
+                    "name": "carrier-transitions"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-ipv4-igmp-oper:igmp/active/vrfs/vrf/group-summary",
+        "spec": {
+            "fields": [
+                {
+                    "name": "vrf-name",
+                    "tag": true
+                },
+                {
+                    "name": "groutes"
+                },
+                {
+                    "name": "sg-routes"
+                },
+                {
+                    "name": "group-count"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-ipv4-igmp-oper:igmp/active/vrfs/vrf/traffic-counters",
+        "spec": {
+            "fields": [
+                {
+                    "name": "vrf-name",
+                    "tag": true
+                },
+                {
+                    "name": "input-queries"
+                },
+                {
+                    "name": "input-reports"
+                },
+                {
+                    "name": "input-leaves"
+                },
+                {
+                    "name": "input-dvmrp"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-ipv4-pim-oper:pim/active/vrfs/vrf/summary",
+        "spec": {
+            "fields": [
+                {
+                    "name": "vrf-name",
+                    "tag": true
+                },
+                {
+                    "name": "route-count"
+                },
+                {
+                    "name": "topology-interface-state-count"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/statistics-global",
+        "spec": {
+            "fields": [
+                {
+                    "name": "instance-name",
+                    "tag": true
+                },
+                {
+                    "name": "statistics",
+                    "fields": [
+                        {
+                            "name": "zero-holdtime-lsp-count"
+                        },
+                        {
+                            "name": "invalid-checksum-lsp-count"
+                        },
+                        {
+                            "name": "iih-dropped-count"
+                        },
+                        {
+                            "name": "lsp-dropped-count"
+                        },
+                        {
+                            "name": "snp-dropped-count"
+                        },
+                        {
+                            "name": "pdu-queue-length"
+                        }
+                    ]
+                },
+                {
+                    "name": "per-area-data",
+                    "fields": [
+                        {
+                            "name": "level",
+                            "tag": true
+                        },
+                        {
+                            "name": "statistics",
+                            "fields": [
+                                {
+                                    "name": "system-lsp-build-count"
+                                },
+                                {
+                                    "name": "system-lsp-refresh-count"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "per-topology-data",
+                            "fields": [
+                                {
+                                    "name": "id",
+                                    "fields": [
+                                        {
+                                            "name": "af-name",
+                                            "tag": true
+                                        },
+                                        {
+                                            "name": "saf-name",
+                                            "tag": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "statistics",
+                                    "fields": [
+                                        {
+                                            "name": "spf-run-count"
+                                        },
+                                        {
+                                            "name": "ispf-run-count"
+                                        },
+                                        {
+                                            "name": "nhc-run-count"
+                                        },
+                                        {
+                                            "name": "prc-run-count"
+                                        },
+                                        {
+                                            "name": "periodic-run-count"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-asr9k-lpts-oper:platform-lptsp-ifib/nodes/node/police",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "police-info",
+                    "fields": [
+                        {
+                            "name": "flow-type",
+                            "tag": true
+                        },
+                        {
+                            "name": "accepted-stats"
+                        },
+                        {
+                            "name": "dropped-stats"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-asr9k-lpts-oper:platform-lptsp-ifib-static/node-statics/node-static/police",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "static-info",
+                    "fields": [
+                        {
+                            "name": "punt-reason-string",
+                            "tag": true
+                        },
+                        {
+                            "name": "accepted"
+                        },
+                        {
+                            "name": "dropped"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-pfi-im-cmd-oper:interfaces/interface-xr/interface",
+        "spec": {
+            "fields": [
+                {
+                    "name": "interface-name",
+                    "tag": true
+                },
+                {
+                    "name": "interface-statistics",
+                    "fields": [
+                        {
+                            "name": "basic-interface-stats",
+                            "fields": [
+                                {
+                                    "name": "bytes-received"
+                                },
+                                {
+                                    "name": "bytes-sent"
+                                },
+                                {
+                                    "name": "input-drops"
+                                },
+                                {
+                                    "name": "input-queue-drops"
+                                },
+                                {
+                                    "name": "output-drops"
+                                },
+                                {
+                                    "name": "output-queue-drops"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "full-interface-stats",
+                            "fields": [
+                                {
+                                    "name": "bytes-received"
+                                },
+                                {
+                                    "name": "bytes-sent"
+                                },
+                                {
+                                    "name": "input-drops"
+                                },
+                                {
+                                    "name": "input-queue-drops"
+                                },
+                                {
+                                    "name": "output-drops"
+                                },
+                                {
+                                    "name": "output-queue-drops"
+                                },
+                                {
+                                    "name": "output-buffer-failures"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/data-rate",
+        "spec": {
+            "fields": [
+                {
+                    "name": "interface-name",
+                    "tag": true
+                },
+                {
+                    "name": "input-data-rate"
+                },
+                {
+                    "name": "output-data-rate"
+                },
+                {
+                    "name": "input-packet-rate"
+                },
+                {
+                    "name": "output-packet-rate"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-asr9k-sc-envmon-oper:environmental-monitoring/racks/rack/slots/slot/modules/module/sensor-types/sensor-type/sensor-names/sensor-name/value-detailed",
+        "spec": {
+            "fields": [
+                {
+                    "name": "module",
+                    "tag": true
+                },
+                {
+                    "name": "name",
+                    "tag": true
+                },
+                {
+                    "name": "slot",
+                    "tag": true
+                },
+                {
+                    "name": "type",
+                    "tag": true
+                },
+                {
+                    "name": "value"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/output/service-policy-names/service-policy-instance/statistics",
+        "spec": {
+            "fields": [
+                {
+                    "name": "interface-name",
+                    "tag": true
+                },
+                {
+                    "name": "service-policy-name",
+                    "tag": true
+                },
+                {
+                    "name": "class-stats",
+                    "fields": [
+                        {
+                            "name": "class-name",
+                            "tag": true
+                        },
+                        {
+                            "name": "general-stats",
+                            "fields": [
+                                {
+                                    "name": "total-drop-rate"
+                                },
+                                {
+                                    "name": "total-transmit-rate"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "queue-stats-array",
+                            "fields": [
+                                {
+                                    "name": "queue-id",
+                                    "tag": true
+                                },
+                                {
+                                    "name": "tail-drop-packets"
+                                },
+                                {
+                                    "name": "queue-instance-length",
+                                    "fields": [
+                                        {
+                                            "name": "value"
+                                        },
+                                        {
+                                            "name": "unit",
+                                            "tag": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "random-drop-packets"
+                                },
+                                {
+                                    "name": "conform-packets"
+                                },
+                                {
+                                    "name": "exceed-packets"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/input/service-policy-names/service-policy-instance/statistics",
+        "spec": {
+            "fields": [
+                {
+                    "name": "interface-name",
+                    "tag": true
+                },
+                {
+                    "name": "service-policy-name",
+                    "tag": true
+                },
+                {
+                    "name": "class-stats",
+                    "fields": [
+                        {
+                            "name": "class-name",
+                            "tag": true
+                        },
+                        {
+                            "name": "general-stats",
+                            "fields": [
+                                {
+                                    "name": "match-data-rate"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-procmem-oper:processes-memory/nodes/node/process-ids/process-id",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "name",
+                    "tag": true
+                },
+                {
+                    "name": "text-seg-size"
+                },
+                {
+                    "name": "data-seg-size"
+                },
+                {
+                    "name": "stack-seg-size"
+                },
+                {
+                    "name": "malloc-size"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-nto-misc-shmem-oper:memory-summary/nodes/node/summary",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "system-ram-memory"
+                },
+                {
+                    "name": "free-application-memory"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "total-cpu-one-minute"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-asr9k-np-oper:hardware-module-np/nodes/node/nps/np/load-utilization",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "np-name",
+                    "tag": true
+                },
+                {
+                    "name": "packet-per-second-rate"
+                },
+                {
+                    "name": "utilization"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-asr9k-np-oper:hardware-module-np/nodes/node/nps/np/counters",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "np-name",
+                    "tag": true
+                },
+                {
+                    "name": "np-counter",
+                    "fields": [
+                        {
+                            "name": "counter-name",
+                            "tag": true
+                        },
+                        {
+                            "name": "counter-type",
+                            "tag": true
+                        },
+                        {
+                            "name": "counter-value"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-asr9k-np-oper:hardware-module-np/nodes/node/nps/np/fast-drop",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "np-name",
+                    "tag": true
+                },
+                {
+                    "name": "np-fast-drop",
+                    "fields": [
+                        {
+                            "name": "interface-name",
+                            "tag": true
+                        },
+                        {
+                            "name": "counter-value"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-subscriber-pppoe-ma-oper:pppoe/access-interface-statistics/access-interface-statistic",
+        "spec": {
+            "fields": [
+                {
+                    "name": "interface-name",
+                    "tag": true
+                },
+                {
+                    "name": "packet-counts",
+                    "fields": [
+                        {
+                            "name": "padi",
+                            "fields": [
+                                {
+                                    "name": "dropped"
+                                },
+                                {
+                                    "name": "received"
+                                },
+                                {
+                                    "name": "sent"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "pado",
+                            "fields": [
+                                {
+                                    "name": "dropped"
+                                },
+                                {
+                                    "name": "received"
+                                },
+                                {
+                                    "name": "sent"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "padr",
+                            "fields": [
+                                {
+                                    "name": "dropped"
+                                },
+                                {
+                                    "name": "received"
+                                },
+                                {
+                                    "name": "sent"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "pads-success",
+                            "fields": [
+                                {
+                                    "name": "dropped"
+                                },
+                                {
+                                    "name": "received"
+                                },
+                                {
+                                    "name": "sent"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "pads-error",
+                            "fields": [
+                                {
+                                    "name": "dropped"
+                                },
+                                {
+                                    "name": "received"
+                                },
+                                {
+                                    "name": "sent"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "padt",
+                            "fields": [
+                                {
+                                    "name": "dropped"
+                                },
+                                {
+                                    "name": "received"
+                                },
+                                {
+                                    "name": "sent"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-subscriber-pppoe-ma-oper:pppoe/nodes/node/summary-total",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "complete-sessions"
+                },
+                {
+                    "name": "flow-control-disconnected-sessions"
+                },
+                {
+                    "name": "flow-control-dropped-sessions"
+                },
+                {
+                    "name": "flow-control-in-flight-sessions"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-subscriber-pppoe-ma-oper:pppoe/nodes/node/access-interface/summaries/summary",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "interface-name",
+                    "tag": true
+                },
+                {
+                    "name": "incomplete-sessions"
+                },
+                {
+                    "name": "sessions"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-ip-rib-ipv4-oper:rib/vrfs/vrf/afs/af/safs/saf/ip-rib-route-table-names/ip-rib-route-table-name/protocol/bgp/as/information",
+        "spec": {
+            "fields": [
+                {
+                    "name": "af-name",
+                    "tag": true
+                },
+                {
+                    "name": "saf-name",
+                    "tag": true
+                },
+                {
+                    "name": "protocol-route-memory"
+                },
+                {
+                    "name": "routes-counts"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-ip-rib-ipv6-oper:ipv6-rib/vrfs/vrf/afs/af/safs/saf/ip-rib-route-table-names/ip-rib-route-table-name/protocol/bgp/as/information",
+        "spec": {
+            "fields": [
+                {
+                    "name": "af-name",
+                    "tag": true
+                },
+                {
+                    "name": "saf-name",
+                    "tag": true
+                },
+                {
+                    "name": "protocol-route-memory"
+                },
+                {
+                    "name": "routes-counts"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-controller-optics-oper:optics-oper/optics-ports/optics-port/optics-info",
+        "spec": {
+            "fields": [
+                {
+                    "name": "name",
+                    "tag": true
+                },
+                {
+                    "name": "laser-state",
+                    "tag": true
+                },
+                {
+                    "name": "grey-wavelength"
+                },
+                {
+                    "name": "rx-low-threshold"
+                },
+                {
+                    "name": "rx-low-warning-threshold"
+                },
+                {
+                    "name": "temperature"
+                },
+                {
+                    "name": "voltage"
+                },
+                {
+                    "name": "lane-data",
+                    "fields": [
+                        {
+                            "name": "lane-index",
+                            "tag": true
+                        },
+                        {
+                            "name": "laser-bias-current-milli-amps"
+                        },
+                        {
+                            "name": "receive-power"
+                        },
+                        {
+                            "name": "transmit-power"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-dwdm-ui-oper:dwdm/ports/port/info",
+        "spec": {
+            "fields": [
+                {
+                    "name": "name",
+                    "tag": true
+                },
+                {
+                    "name": "g709-info",
+                    "fields": [
+                        {
+                            "name": "uc"
+                        },
+                        {
+                            "name": "ec"
+                        }
+                    ]
+                },
+                {
+                    "name": "optics-info",
+                    "fields": [
+                        {
+                            "name": "receive-power"
+                        },
+                        {
+                            "name": "transmit-power"
+                        },
+                        {
+                            "name": "wave-channel"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-man-ipsla-oper:ipsla/operation-data/operations/operation/statistics/latest/target",
+        "spec": {
+            "fields": [
+                {
+                    "name": "operation-id",
+                    "tag": true
+                },
+                {
+                    "name": "common-stats",
+                    "fields": [
+                        {
+                            "name": "busy-count"
+                        },
+                        {
+                            "name": "disconnect-count"
+                        },
+                        {
+                            "name": "dropped-count"
+                        },
+                        {
+                            "name": "internal-error-count"
+                        },
+                        {
+                            "name": "no-connection-count"
+                        },
+                        {
+                            "name": "ok-count"
+                        }
+                    ]
+                },
+                {
+                    "name": "specific-stats",
+                    "fields": [
+                        {
+                            "name": "op-type",
+                            "tag": true
+                        },
+                        {
+                            "name": "udp-jitter-stats",
+                            "fields": [
+                                {
+                                    "name": "jitter-in"
+                                },
+                                {
+                                    "name": "jitter-out"
+                                },
+                                {
+                                    "name": "packet-late-arrivals"
+                                },
+                                {
+                                    "name": "packet-out-of-sequence"
+                                },
+                                {
+                                    "name": "packet-mia"
+                                },
+                                {
+                                    "name": "packet-loss-ds"
+                                },
+                                {
+                                    "name": "packet-loss-sd"
+                                },
+                                {
+                                    "name": "one-way-count"
+                                },
+                                {
+                                    "name": "one-way-ds-max"
+                                },
+                                {
+                                    "name": "one-way-ds-sum"
+                                },
+                                {
+                                    "name": "one-way-ds-sum2"
+                                },
+                                {
+                                    "name": "one-way-sd-max"
+                                },
+                                {
+                                    "name": "one-way-sd-sum"
+                                },
+                                {
+                                    "name": "one-way-sd-sum2"
+                                },
+                                {
+                                    "name": "negative-ds-max"
+                                },
+                                {
+                                    "name": "negative-ds-count"
+                                },
+                                {
+                                    "name": "negative-ds-sum"
+                                },
+                                {
+                                    "name": "negative-ds-sum2"
+                                },
+                                {
+                                    "name": "negative-sd-max"
+                                },
+                                {
+                                    "name": "negative-sd-count"
+                                },
+                                {
+                                    "name": "negative-sd-sum"
+                                },
+                                {
+                                    "name": "negative-sd-sum2"
+                                },
+                                {
+                                    "name": "positive-ds-max"
+                                },
+                                {
+                                    "name": "positive-ds-count"
+                                },
+                                {
+                                    "name": "positive-ds-sum"
+                                },
+                                {
+                                    "name": "positive-ds-sum2"
+                                },
+                                {
+                                    "name": "positive-sd-max"
+                                },
+                                {
+                                    "name": "positive-sd-count"
+                                },
+                                {
+                                    "name": "positive-sd-sum"
+                                },
+                                {
+                                    "name": "positive-sd-sum2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-man-ipsla-oper:ipsla/operation-data/operations/operation/statistics/aggregated/hours/hour/non-distributed/target",
+        "spec": {
+            "fields": [
+                {
+                    "name": "operation-id",
+                    "tag": true
+                },
+                {
+                    "name": "hour-index",
+                    "tag": true
+                },
+                {
+                    "name": "common-stats",
+                    "fields": [
+                        {
+                            "name": "busy-count"
+                        },
+                        {
+                            "name": "disconnect-count"
+                        },
+                        {
+                            "name": "dropped-count"
+                        },
+                        {
+                            "name": "internal-error-count"
+                        },
+                        {
+                            "name": "no-connection-count"
+                        },
+                        {
+                            "name": "ok-count"
+                        }
+                    ]
+                },
+                {
+                    "name": "specific-stats",
+                    "fields": [
+                        {
+                            "name": "op-type",
+                            "tag": true
+                        },
+                        {
+                            "name": "udp-jitter-stats",
+                            "fields": [
+                                {
+                                    "name": "jitter-in"
+                                },
+                                {
+                                    "name": "jitter-out"
+                                },
+                                {
+                                    "name": "packet-late-arrivals"
+                                },
+                                {
+                                    "name": "packet-out-of-sequence"
+                                },
+                                {
+                                    "name": "packet-mia"
+                                },
+                                {
+                                    "name": "packet-loss-ds"
+                                },
+                                {
+                                    "name": "packet-loss-sd"
+                                },
+                                {
+                                    "name": "one-way-count"
+                                },
+                                {
+                                    "name": "one-way-ds-max"
+                                },
+                                {
+                                    "name": "one-way-ds-sum"
+                                },
+                                {
+                                    "name": "one-way-ds-sum2"
+                                },
+                                {
+                                    "name": "one-way-sd-max"
+                                },
+                                {
+                                    "name": "one-way-sd-sum"
+                                },
+                                {
+                                    "name": "one-way-sd-sum2"
+                                },
+                                {
+                                    "name": "negative-ds-max"
+                                },
+                                {
+                                    "name": "negative-ds-count"
+                                },
+                                {
+                                    "name": "negative-ds-sum"
+                                },
+                                {
+                                    "name": "negative-ds-sum2"
+                                },
+                                {
+                                    "name": "negative-sd-max"
+                                },
+                                {
+                                    "name": "negative-sd-count"
+                                },
+                                {
+                                    "name": "negative-sd-sum"
+                                },
+                                {
+                                    "name": "negative-sd-sum2"
+                                },
+                                {
+                                    "name": "positive-ds-max"
+                                },
+                                {
+                                    "name": "positive-ds-count"
+                                },
+                                {
+                                    "name": "positive-ds-sum"
+                                },
+                                {
+                                    "name": "positive-ds-sum2"
+                                },
+                                {
+                                    "name": "positive-sd-max"
+                                },
+                                {
+                                    "name": "positive-sd-count"
+                                },
+                                {
+                                    "name": "positive-sd-sum"
+                                },
+                                {
+                                    "name": "positive-sd-sum2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-man-ipsla-oper:ipsla/operation-data/operations/operation/statistics/aggregated/hours/hour/distributed/target/distribution-intervals/distribution-interval",
+        "spec": {
+            "fields": [
+                {
+                    "name": "operation-id",
+                    "tag": true
+                },
+                {
+                    "name": "hour-index",
+                    "tag": true
+                },
+                {
+                    "name": "distribution-index",
+                    "tag": true
+                },
+                {
+                    "name": "common-stats",
+                    "fields": [
+                        {
+                            "name": "busy-count"
+                        },
+                        {
+                            "name": "disconnect-count"
+                        },
+                        {
+                            "name": "dropped-count"
+                        },
+                        {
+                            "name": "internal-error-count"
+                        },
+                        {
+                            "name": "no-connection-count"
+                        },
+                        {
+                            "name": "ok-count"
+                        }
+                    ]
+                },
+                {
+                    "name": "specific-stats",
+                    "fields": [
+                        {
+                            "name": "op-type",
+                            "tag": true
+                        },
+                        {
+                            "name": "udp-jitter-stats",
+                            "fields": [
+                                {
+                                    "name": "jitter-in"
+                                },
+                                {
+                                    "name": "jitter-out"
+                                },
+                                {
+                                    "name": "packet-late-arrivals"
+                                },
+                                {
+                                    "name": "packet-out-of-sequence"
+                                },
+                                {
+                                    "name": "packet-mia"
+                                },
+                                {
+                                    "name": "packet-loss-ds"
+                                },
+                                {
+                                    "name": "packet-loss-sd"
+                                },
+                                {
+                                    "name": "one-way-count"
+                                },
+                                {
+                                    "name": "one-way-ds-max"
+                                },
+                                {
+                                    "name": "one-way-ds-sum"
+                                },
+                                {
+                                    "name": "one-way-ds-sum2"
+                                },
+                                {
+                                    "name": "one-way-sd-max"
+                                },
+                                {
+                                    "name": "one-way-sd-sum"
+                                },
+                                {
+                                    "name": "one-way-sd-sum2"
+                                },
+                                {
+                                    "name": "negative-ds-max"
+                                },
+                                {
+                                    "name": "negative-ds-count"
+                                },
+                                {
+                                    "name": "negative-ds-sum"
+                                },
+                                {
+                                    "name": "negative-ds-sum2"
+                                },
+                                {
+                                    "name": "negative-sd-max"
+                                },
+                                {
+                                    "name": "negative-sd-count"
+                                },
+                                {
+                                    "name": "negative-sd-sum"
+                                },
+                                {
+                                    "name": "negative-sd-sum2"
+                                },
+                                {
+                                    "name": "positive-ds-max"
+                                },
+                                {
+                                    "name": "positive-ds-count"
+                                },
+                                {
+                                    "name": "positive-ds-sum"
+                                },
+                                {
+                                    "name": "positive-ds-sum2"
+                                },
+                                {
+                                    "name": "positive-sd-max"
+                                },
+                                {
+                                    "name": "positive-sd-count"
+                                },
+                                {
+                                    "name": "positive-sd-sum"
+                                },
+                                {
+                                    "name": "positive-sd-sum2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-man-ipsla-oper:ipsla/operation-data/operations/operation/statistics/aggregated/enhanced-intervals/enhanced-interval/start-times/start-time",
+        "spec": {
+            "fields": [
+                {
+                    "name": "operation-id",
+                    "tag": true
+                },
+                {
+                    "name": "enhanced-interval",
+                    "tag": true
+                },
+                {
+                    "name": "interval-start-time",
+                    "tag": true
+                },
+                {
+                    "name": "common-stats",
+                    "fields": [
+                        {
+                            "name": "busy-count"
+                        },
+                        {
+                            "name": "disconnect-count"
+                        },
+                        {
+                            "name": "dropped-count"
+                        },
+                        {
+                            "name": "internal-error-count"
+                        },
+                        {
+                            "name": "no-connection-count"
+                        },
+                        {
+                            "name": "ok-count"
+                        }
+                    ]
+                },
+                {
+                    "name": "specific-stats",
+                    "fields": [
+                        {
+                            "name": "op-type",
+                            "tag": true
+                        },
+                        {
+                            "name": "udp-jitter-stats",
+                            "fields": [
+                                {
+                                    "name": "jitter-in"
+                                },
+                                {
+                                    "name": "jitter-out"
+                                },
+                                {
+                                    "name": "packet-late-arrivals"
+                                },
+                                {
+                                    "name": "packet-out-of-sequence"
+                                },
+                                {
+                                    "name": "packet-mia"
+                                },
+                                {
+                                    "name": "packet-loss-ds"
+                                },
+                                {
+                                    "name": "packet-loss-sd"
+                                },
+                                {
+                                    "name": "one-way-count"
+                                },
+                                {
+                                    "name": "one-way-ds-max"
+                                },
+                                {
+                                    "name": "one-way-ds-sum"
+                                },
+                                {
+                                    "name": "one-way-ds-sum2"
+                                },
+                                {
+                                    "name": "one-way-sd-max"
+                                },
+                                {
+                                    "name": "one-way-sd-sum"
+                                },
+                                {
+                                    "name": "one-way-sd-sum2"
+                                },
+                                {
+                                    "name": "negative-ds-max"
+                                },
+                                {
+                                    "name": "negative-ds-count"
+                                },
+                                {
+                                    "name": "negative-ds-sum"
+                                },
+                                {
+                                    "name": "negative-ds-sum2"
+                                },
+                                {
+                                    "name": "negative-sd-max"
+                                },
+                                {
+                                    "name": "negative-sd-count"
+                                },
+                                {
+                                    "name": "negative-sd-sum"
+                                },
+                                {
+                                    "name": "negative-sd-sum2"
+                                },
+                                {
+                                    "name": "positive-ds-max"
+                                },
+                                {
+                                    "name": "positive-ds-count"
+                                },
+                                {
+                                    "name": "positive-ds-sum"
+                                },
+                                {
+                                    "name": "positive-ds-sum2"
+                                },
+                                {
+                                    "name": "positive-sd-max"
+                                },
+                                {
+                                    "name": "positive-sd-count"
+                                },
+                                {
+                                    "name": "positive-sd-sum"
+                                },
+                                {
+                                    "name": "positive-sd-sum2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-pmengine-oper:performance-management/dwdm/dwdm-ports/dwdm-port/dwdm-current/dwdm-minute15/dwdm-minute15-optics/dwdm-minute15-optic",
+        "spec": {
+            "fields": [
+                {
+                    "name": "name",
+                    "tag": true
+                },
+                {
+                    "name": "osnr",
+                    "fields": [
+                        {
+                            "name": "average"
+                        },
+                        {
+                            "name": "maximum"
+                        },
+                        {
+                            "name": "minimum"
+                        }
+                    ]
+                },
+                {
+                    "name": "cd",
+                    "fields": [
+                        {
+                            "name": "average"
+                        },
+                        {
+                            "name": "maximum"
+                        },
+                        {
+                            "name": "minimum"
+                        }
+                    ]
+                },
+                {
+                    "name": "dgd",
+                    "fields": [
+                        {
+                            "name": "average"
+                        },
+                        {
+                            "name": "maximum"
+                        },
+                        {
+                            "name": "minimum"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
 ]
-
-
