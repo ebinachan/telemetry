@@ -653,6 +653,42 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-asr9k-fsi-oper:fabric-stats/nodes/node/statses/stats",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "type",
+                    "tag": true
+                },
+                {
+                    "name": "stat-table-name",
+                    "tag": true
+                },
+                {
+                    "name": "stats-table",
+                    "fields": [
+                        {
+                            "name": "fsi-stat",
+                            "fields": [
+                                {
+                                    "name": "counter-name",
+                                    "tag": true
+                                },
+                                {
+                                    "name": "count"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-asr9k-np-oper:hardware-module-np/nodes/node/nps/np/counters",
         "spec": {
             "fields": [
