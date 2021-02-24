@@ -746,6 +746,281 @@
             ]
         }
     },
+        {
+        "basepath": "Cisco-IOS-XR-asr9k-np-oper:hardware-module-np/nodes/node/nps/np/tcam-summary",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "np-name",
+                    "tag": true
+                },
+                {
+                    "name": "tcam-info",
+                    "fields": [
+                        {
+                            "name": "tcam-lt-l2",
+                            "fields": [
+                                {
+                                    "name": "partition-id",
+                                    "tag": true
+                                },
+                                {
+                                    "name": "valid-entries"
+                                },
+                                {
+                                    "name": "free-entries"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "tcam-lt-ods2",
+                            "fields": [
+                                {
+                                    "name": "reserved-entries"
+                                },
+                                {
+                                    "name": "free-entries"
+                                },
+                                {
+                                    "name": "acl-common",
+                                    "fields": [
+                                        {
+                                            "name": "free-entries"
+                                        },
+                                        {
+                                            "name": "allocated-entries"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "app-id-ifib",
+                                    "fields": [
+                                        {
+                                            "name": "num-vmr-ids"
+                                        },
+                                        {
+                                            "name": "num-allocated-entries"
+                                        },
+                                        {
+                                            "name": "num-active-entries"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "app-id-qos",
+                                    "fields": [
+                                        {
+                                            "name": "num-vmr-ids"
+                                        },
+                                        {
+                                            "name": "num-allocated-entries"
+                                        },
+                                        {
+                                            "name": "num-active-entries"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "app-id-acl",
+                                    "fields": [
+                                        {
+                                            "name": "num-vmr-ids"
+                                        },
+                                        {
+                                            "name": "num-allocated-entries"
+                                        },
+                                        {
+                                            "name": "num-active-entries"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "app-id-afmon",
+                                    "fields": [
+                                        {
+                                            "name": "num-vmr-ids"
+                                        },
+                                        {
+                                            "name": "num-allocated-entries"
+                                        },
+                                        {
+                                            "name": "num-active-entries"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "app-id-li",
+                                    "fields": [
+                                        {
+                                            "name": "num-vmr-ids"
+                                        },
+                                        {
+                                            "name": "num-allocated-entries"
+                                        },
+                                        {
+                                            "name": "num-active-entries"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "app-id-pbr",
+                                    "fields": [
+                                        {
+                                            "name": "num-vmr-ids"
+                                        },
+                                        {
+                                            "name": "num-allocated-entries"
+                                        },
+                                        {
+                                            "name": "num-active-entries"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "app-id-edpl",
+                                    "fields": [
+                                        {
+                                            "name": "num-vmr-ids"
+                                        },
+                                        {
+                                            "name": "num-allocated-entries"
+                                        },
+                                        {
+                                            "name": "num-active-entries"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "tcam-lt-ods8",
+                            "fields": [
+                                {
+                                    "name": "reserved-entries"
+                                },
+                                {
+                                    "name": "free-entries"
+                                },
+                                {
+                                    "name": "acl-common",
+                                    "fields": [
+                                        {
+                                            "name": "free-entries"
+                                        },
+                                        {
+                                            "name": "allocated-entries"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "app-id-ifib",
+                                    "fields": [
+                                        {
+                                            "name": "num-vmr-ids"
+                                        },
+                                        {
+                                            "name": "num-allocated-entries"
+                                        },
+                                        {
+                                            "name": "num-active-entries"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "app-id-qos",
+                                    "fields": [
+                                        {
+                                            "name": "num-vmr-ids"
+                                        },
+                                        {
+                                            "name": "num-allocated-entries"
+                                        },
+                                        {
+                                            "name": "num-active-entries"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "app-id-acl",
+                                    "fields": [
+                                        {
+                                            "name": "num-vmr-ids"
+                                        },
+                                        {
+                                            "name": "num-allocated-entries"
+                                        },
+                                        {
+                                            "name": "num-active-entries"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "app-id-afmon",
+                                    "fields": [
+                                        {
+                                            "name": "num-vmr-ids"
+                                        },
+                                        {
+                                            "name": "num-allocated-entries"
+                                        },
+                                        {
+                                            "name": "num-active-entries"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "app-id-li",
+                                    "fields": [
+                                        {
+                                            "name": "num-vmr-ids"
+                                        },
+                                        {
+                                            "name": "num-allocated-entries"
+                                        },
+                                        {
+                                            "name": "num-active-entries"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "app-id-pbr",
+                                    "fields": [
+                                        {
+                                            "name": "num-vmr-ids"
+                                        },
+                                        {
+                                            "name": "num-allocated-entries"
+                                        },
+                                        {
+                                            "name": "num-active-entries"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "app-id-edpl",
+                                    "fields": [
+                                        {
+                                            "name": "num-vmr-ids"
+                                        },
+                                        {
+                                            "name": "num-allocated-entries"
+                                        },
+                                        {
+                                            "name": "num-active-entries"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
     {
         "basepath": "Cisco-IOS-XR-subscriber-pppoe-ma-oper:pppoe/access-interface-statistics/access-interface-statistic",
         "spec": {
