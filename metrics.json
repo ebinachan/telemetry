@@ -132,6 +132,41 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/levels/level/adjacencies/adjacency",
+        "spec": {
+            "fields": [
+                {
+                    "name": "instance-name",
+                    "tag": true
+                },
+                {
+                    "name": "level",
+                    "tag": true
+                },
+                {
+                    "name": "system-id",
+                    "tag": true
+                },
+                {
+                    "name": "interface-name",
+                    "tag": true
+                },
+                {
+                    "name": "adjacency-interface"
+                },
+                {
+                    "name": "adjacency-uptime"
+                },
+                {
+                    "name": "adjacency-state"
+                },
+                {
+                    "name": "adjacency-bfd-state"
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-ip-daps-oper:address-pool-service/nodes/node/pools/pool/allocated-addresses",
         "spec": {
             "fields": [
