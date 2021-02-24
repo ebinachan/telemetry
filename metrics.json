@@ -79,6 +79,20 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-shellutil-oper:system-time/uptime",
+        "spec": {
+            "fields": [
+                {
+                    "name": "host-name",
+                    "tag": true
+                },
+                {
+                    "name": "uptime"
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-ip-daps-oper:address-pool-service/nodes/node/pools/pool/allocated-addresses",
         "spec": {
             "fields": [
