@@ -341,6 +341,184 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-ip-rsvp-oper:rsvp/interface-briefs/interface-brief",
+        "spec": {
+            "fields": [
+                {
+                    "name": "interface-name",
+                    "tag": true
+                },
+                {
+                    "name": "bandwidth-information",
+                    "fields": [
+                        {
+                            "name": "pre-standard-dste-interface",
+                            "fields": [
+                                {
+                                    "name": "allocated-bit-rate"
+                                },
+                                {
+                                    "name": "max-flow-bandwidth"
+                                },
+                                {
+                                    "name": "max-bandwidth"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-ip-rsvp-oper:rsvp/counters/interface-messages/interface-message",
+        "spec": {
+            "fields": [
+                {
+                    "name": "interface-name",
+                    "tag": true
+                },
+                {
+                    "name": "retransmitted-messages"
+                },
+                {
+                    "name": "out-of-order-messages"
+                },
+                {
+                    "name": "rate-limited-messages"
+                },
+                {
+                    "name": "received-messages",
+                    "fields": [
+                        {
+                            "name": "ack"
+                        },
+                        {
+                            "name": "hello"
+                        },
+                        {
+                            "name": "path"
+                        },
+                        {
+                            "name": "path-error"
+                        },
+                        {
+                            "name": "path-tear"
+                        },
+                        {
+                            "name": "reservation"
+                        },
+                        {
+                            "name": "reservation-confirm"
+                        },
+                        {
+                            "name": "reservation-error"
+                        },
+                        {
+                            "name": "reservation-tear"
+                        }
+                    ]
+                },
+                {
+                    "name": "transmitted-messages",
+                    "fields": [
+                        {
+                            "name": "ack"
+                        },
+                        {
+                            "name": "hello"
+                        },
+                        {
+                            "name": "path"
+                        },
+                        {
+                            "name": "path-error"
+                        },
+                        {
+                            "name": "path-tear"
+                        },
+                        {
+                            "name": "reservation"
+                        },
+                        {
+                            "name": "reservation-confirm"
+                        },
+                        {
+                            "name": "reservation-error"
+                        },
+                        {
+                            "name": "reservation-tear"
+                        }
+                    ]
+                },
+                {
+                    "name": "bundle-received-messages",
+                    "fields": [
+                        {
+                            "name": "ack"
+                        },
+                        {
+                            "name": "hello"
+                        },
+                        {
+                            "name": "path"
+                        },
+                        {
+                            "name": "path-error"
+                        },
+                        {
+                            "name": "path-tear"
+                        },
+                        {
+                            "name": "reservation"
+                        },
+                        {
+                            "name": "reservation-confirm"
+                        },
+                        {
+                            "name": "reservation-error"
+                        },
+                        {
+                            "name": "reservation-tear"
+                        }
+                    ]
+                },
+                {
+                    "name": "bundle-transmitted-messages",
+                    "fields": [
+                        {
+                            "name": "ack"
+                        },
+                        {
+                            "name": "hello"
+                        },
+                        {
+                            "name": "path"
+                        },
+                        {
+                            "name": "path-error"
+                        },
+                        {
+                            "name": "path-tear"
+                        },
+                        {
+                            "name": "reservation"
+                        },
+                        {
+                            "name": "reservation-confirm"
+                        },
+                        {
+                            "name": "reservation-error"
+                        },
+                        {
+                            "name": "reservation-tear"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/statistics-global",
         "spec": {
             "fields": [
@@ -871,7 +1049,7 @@
             ]
         }
     },
-        {
+    {
         "basepath": "Cisco-IOS-XR-asr9k-np-oper:hardware-module-np/nodes/node/nps/np/tcam-summary",
         "spec": {
             "fields": [
