@@ -1296,6 +1296,51 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/process-info",
+        "spec": {
+            "fields": [
+                {
+                    "name": "instance-name",
+                    "tag": true
+                },
+                {
+                    "name": "global",
+                    "fields": [
+                        {
+                            "name": "restart-count"
+                        },
+                        {
+                            "name": "total-vrf-count"
+                        },
+                        {
+                            "name": "neighbors-count-total"
+                        },
+                        {
+                            "name": "established-neighbors-count-total"
+                        }
+                    ]
+                },
+                {
+                    "name": "vrf",
+                    "fields": [
+                        {
+                            "name": "network-count"
+                        },
+                        {
+                            "name": "path-count"
+                        },
+                        {
+                            "name": "neighbors-count"
+                        },
+                        {
+                            "name": "established-neighbors-count"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-controller-optics-oper:optics-oper/optics-ports/optics-port/optics-info",
         "spec": {
             "fields": [
