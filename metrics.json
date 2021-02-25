@@ -304,6 +304,43 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-mpls-te-oper:mpls-te/tunnels/summary",
+        "spec": {
+            "fields": [
+                {
+                    "name": "backup-tunnels"
+                },
+                {
+                    "name": "link-protected-tunnels"
+                },
+                {
+                    "name": "node-protected-tunnels"
+                },
+                {
+                    "name": "bw-protected-tunnels"
+                },
+                {
+                    "name": "frr-head-tunnels"
+                },
+                {
+                    "name": "frr-mid-point-tunnels"
+                },
+                {
+                    "name": "frr-protected-interfaces"
+                },
+                {
+                    "name": "p2p-head-tunnels"
+                },
+                {
+                    "name": "protected-head-tunnels"
+                },
+                {
+                    "name": "protected-mid-point-tunnels"
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/statistics-global",
         "spec": {
             "fields": [
