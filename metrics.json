@@ -1533,6 +1533,24 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/sessions/session",
+        "spec": {
+            "fields": [
+                {
+                    "name": "instance-name",
+                    "tag": true
+                },
+                {
+                    "name": "neighbor-address",
+                    "tag": true
+                },
+                {
+                    "name": "connection-established-time"
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/process-info",
         "spec": {
             "fields": [
