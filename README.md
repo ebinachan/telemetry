@@ -18,6 +18,10 @@ telemetry model-driven
    protocol tcp
   !
  !
+ sensor-group SG_BGP
+  sensor-path Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/process-info
+  sensor-path Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/sessions/session
+ !
  sensor-group SG_FIA
   sensor-path Cisco-IOS-XR-asr9k-fsi-oper:fabric-stats/nodes/node/statses/stats
  !
@@ -40,6 +44,8 @@ telemetry model-driven
   sensor-path Cisco-IOS-XR-pmengine-oper:performance-management/dwdm/dwdm-ports/dwdm-port[name='dwdm0/2/0/20/0']/dwdm-current/dwdm-minute15/dwdm-minute15-optics/dwdm-minute15-optic
  !
  sensor-group SG_GENERAL
+  sensor-path Cisco-IOS-XR-flowspec-oper:flow-spec/summary
+  sensor-path Cisco-IOS-XR-flowspec-oper:flow-spec/vrfs/vrf/afs/af/flows/flow
   sensor-path Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization
   sensor-path Cisco-IOS-XR-nto-misc-shmem-oper:memory-summary/nodes/node/summary
   sensor-path Cisco-IOS-XR-subscriber-pppoe-ma-oper:pppoe/nodes/node/summary-total
