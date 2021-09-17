@@ -93,6 +93,79 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-flowspec-oper:flow-spec/clients/client",
+        "spec": {
+            "fields": [
+                {
+                    "name": "client-type",
+                    "tag": true
+                },
+                {
+                    "name": "client-flows"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-flowspec-oper:flow-spec/summary",
+        "spec": {
+            "fields": [
+                {
+                    "name": "vrfafi-tables"
+                },
+                {
+                    "name": "flows"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-flowspec-oper:flow-spec/vrfs/vrf/afs/af/flows/flow",
+        "spec": {
+            "fields": [
+                {
+                    "name": "vrf-name",
+                    "tag": true
+                },
+                {
+                    "name": "af-name",
+                    "tag": true
+                },
+                {
+                    "name": "flow-notation",
+                    "tag": true
+                },
+                {
+                    "name": "flow-statistics",
+                    "fields": [
+                        {
+                            "name": "classified",
+                            "fields": [
+                                {
+                                    "name": "packets"
+                                },
+                                {
+                                    "name": "bytes"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dropped",
+                            "fields": [
+                                {
+                                    "name": "packets"
+                                },
+                                {
+                                    "name": "bytes"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-nto-misc-shprocmem-oper:processes-memory/nodes/node/job-ids/job-id",
         "spec": {
             "fields": [
