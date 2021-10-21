@@ -79,6 +79,43 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-l2vpn-oper:l2vpnv2/active/xconnect-summary",
+        "spec": {
+            "fields": [
+                {
+                    "name": "number-xconnects"
+                },
+                {
+                    "name": "number-xconnects-up"
+                },
+                {
+                    "name": "number-xconnects-down"
+                },
+                {
+                    "name": "number-xconnects-unresolved"
+                },
+                {
+                    "name": "number-xconnects-administratively-down"
+                },
+                {
+                    "name": "down-backup-xconnects"
+                },
+                {
+                    "name": "admin-down-backup-xconnects"
+                },
+                {
+                    "name": "unresolved-backup-xconnects"
+                },
+                {
+                    "name": "standby-backup-xconnects"
+                },
+                {
+                    "name": "standby-ready-backup-xconnects"
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-shellutil-oper:system-time/uptime",
         "spec": {
             "fields": [
