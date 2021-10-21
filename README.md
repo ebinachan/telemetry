@@ -46,6 +46,7 @@ telemetry model-driven
  sensor-group SG_GENERAL
   sensor-path Cisco-IOS-XR-flowspec-oper:flow-spec/summary
   sensor-path Cisco-IOS-XR-flowspec-oper:flow-spec/vrfs/vrf/afs/af/flows/flow
+  sensor-path Cisco-IOS-XR-l2vpn-oper:l2vpnv2/active/bridge-summary
   sensor-path Cisco-IOS-XR-l2vpn-oper:l2vpnv2/active/xconnect-summary
   sensor-path Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization
   sensor-path Cisco-IOS-XR-nto-misc-shmem-oper:memory-summary/nodes/node/summary

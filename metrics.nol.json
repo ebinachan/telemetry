@@ -116,6 +116,43 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-l2vpn-oper:l2vpnv2/active/bridge-summary",
+        "spec": {
+            "fields": [
+                {
+                    "name": "number-pseudowires"
+                },
+                {
+                    "name": "number-p-ws-up"
+                },
+                {
+                    "name": "number-p-ws-down"
+                },
+                {
+                    "name": "standby-pseudowires"
+                },
+                {
+                    "name": "number-bridge-domains"
+                },
+                {
+                    "name": "number-bridge-domains-up"
+                },
+                {
+                    "name": "number-bridge-domains-shut"
+                },
+                {
+                    "name": "number-a-cs"
+                },
+                {
+                    "name": "number-a-cs-up"
+                },
+                {
+                    "name": "number-a-cs-down"
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-shellutil-oper:system-time/uptime",
         "spec": {
             "fields": [
