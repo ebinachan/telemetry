@@ -153,6 +153,53 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-ethernet-cfm-oper:cfm/nodes/node/summary",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node",
+                    "tag": true
+                },
+                {
+                    "name": "local-meps"
+                },
+                {
+                    "name": "operational-local-meps"
+                },
+                {
+                    "name": "down-meps"
+                },
+                {
+                    "name": "up-meps"
+                },
+                {
+                    "name": "disabled-misconfigured"
+                },
+                {
+                    "name": "disabled-out-of-resources"
+                },
+                {
+                    "name": "disabled-operational-error"
+                },
+                {
+                    "name": "peer-meps"
+                },
+                {
+                    "name": "operational-peer-meps"
+                },
+                {
+                    "name": "peer-meps-with-defects"
+                },
+                {
+                    "name": "peer-meps-without-defects"
+                },
+                {
+                    "name": "peer-meps-timed-out"
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-shellutil-oper:system-time/uptime",
         "spec": {
             "fields": [
