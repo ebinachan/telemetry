@@ -1790,6 +1790,58 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/rpki-server-list",
+        "spec": {
+            "fields": [
+                {
+                    "name": "instance-name",
+                    "tag": true
+                },
+                {
+                    "name": "rpki-server",
+                    "fields": [
+                        {
+                            "name": "name",
+                            "tag": true
+                        },
+                        {
+                            "name": "state-time"
+                        },
+                        {
+                            "name": "ipv4roa"
+                        },
+                        {
+                            "name": "ipv6roa"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/rpki-summary",
+        "spec": {
+            "fields": [
+                {
+                    "name": "instance-name",
+                    "tag": true
+                },
+                {
+                    "name": "ipv4roa-nets"
+                },
+                {
+                    "name": "ipv4roa-paths"
+                },
+                {
+                    "name": "ipv6roa-nets"
+                },
+                {
+                    "name": "ipv6roa-paths"
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-controller-optics-oper:optics-oper/optics-ports/optics-port/optics-info",
         "spec": {
             "fields": [
