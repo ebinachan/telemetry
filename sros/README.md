@@ -36,4 +36,6 @@ Sample sensor list:
 /state/card[slot-number=*]/resource-usage/sap/allocated
 /state/card[slot-number=*]/resource-usage/sap/free
 
+# "/state/card/fp/statistics"
+
 ```
