@@ -1,0 +1,61 @@
+processors:
+  source_trim:
+    event-strings:
+      #debug: true
+      #value-names:
+      tag-names:
+        - "source"
+      transforms:
+        - split:
+        #- replace:
+            apply-on: "value"
+            split-on: ":"
+            #old: ".*"
+            #new: "3"
+            join-with: ""
+            ignore-last: 1
+  convert_int:
+    event-convert:
+      value-names:
+        - ".*octets$"
+        - ".*packets$"
+        - ".*total$"
+        - ".*allocated$"
+        - ".*free$"
+        - ".*errors$"
+        - ".*discards$"
+      type: int
+  convert_float:
+    event-convert:
+      value-names:
+        - ".*current$"
+        - ".*alarm$"
+        - ".*usage$"
+      type: float
+
+
+outputs:
+  output1:
+    type: file
+    file-type: stdout
+    event-processors:
+      - source_trim
+      - convert_int
+      - convert_float
+  output2:
+    type: influxdb 
+    url: http://localhost:8086
+    bucket: telegraf/20_weeks
+    token: 
+    batch-size: 1000 
+    flush-timer: 10s
+    use-gzip: false
+    enable-tls: false
+    override-timestamps: false 
+    health-check-period: 30s 
+    debug: false 
+    event-processors:
+      - source_trim
+      - convert_int
+      - convert_float
+
