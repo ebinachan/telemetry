@@ -1,0 +1,144 @@
+/configure system telemetry
+            persistent-subscriptions
+                subscription "PS1" shutdown
+                no subscription "PS1"
+                subscription "PS_SROS_PORTSTATS" shutdown
+                no subscription "PS_SROS_PORTSTATS" 
+                subscription "PS_SROS_VOQSTATS" shutdown
+                no subscription "PS_SROS_VOQSTATS" 
+                subscription "PS_SROS_OPTICS" shutdown
+                no subscription "PS_SROS_OPTICS" 
+                subscription "PS_SROS_CPU" shutdown
+                no subscription "PS_SROS_CPU" 
+                subscription "PS_SROS_MEM" shutdown
+                no subscription "PS_SROS_MEM" 
+                subscription "PS_SROS_SAP" shutdown
+                no subscription "PS_SROS_SAP" 
+            exit
+
+/configure system telemetry
+            sensor-groups
+            no sensor-group "SG1"
+            no sensor-group "SG_PORTSTATS"
+            no sensor-group "SG_VOQSTATS"
+            no sensor-group "SG_OPTICS"
+            no sensor-group "SG_CPU"
+            no sensor-group "SG_MEM"
+            no sensor-group "SG_SAP"
+
+
+
+
+/configure system telemetry
+            destination-group "GNMIC_ONE" create
+                allow-unsecure-connection
+                tcp-keepalive
+                    shutdown
+                exit
+                destination 100.64.10.126 port 57400 create
+                    router-instance "Base"
+                exit
+            exit
+            sensor-groups
+                sensor-group "SG_PORTSTATS" create
+                    path "/state/port/statistics" create
+                    exit
+                exit
+                sensor-group "SG_VOQSTATS" create
+                    path "/state/port/egress/voq/forward-octets" create
+                    exit
+                    path "/state/port/egress/voq/drop-packets" create
+                    exit
+                exit
+                sensor-group "SG_OPTICS" create
+                    path "/state/port/transceiver/digital-diagnostic-monitoring/temperature/current" create
+                    exit
+                    path "/state/port/transceiver/digital-diagnostic-monitoring/transmit-output-power/current" create
+                    exit
+                    path "/state/port/transceiver/digital-diagnostic-monitoring/received-optical-power/current" create
+                    exit
+                    path "/state/port/transceiver/digital-diagnostic-monitoring/received-optical-power/low-alarm" create
+                    exit
+                exit
+                sensor-group "SG_CPU" create
+                    path "/state/card/cpu/summary/busiest-core-utilization/cpu-usage" create
+                    exit
+                exit
+                sensor-group "SG_MEM" create
+                    path "/state/card/memory-pools/summary" create
+                    exit
+                exit
+                sensor-group "SG_SAP" create
+                    path "/state/card/resource-usage/sap/allocated" create
+                    exit
+                    path "/state/card/resource-usage/sap/free" create
+                    exit
+                exit
+            exit
+            persistent-subscriptions
+                subscription "PS_SROS_PORTSTATS" create
+                    destination-group "GNMIC_ONE"
+                    encoding json-ietf
+                    mode sample
+                    sample-interval 60000
+                    sensor-group "SG_PORTSTATS"
+                    local-source-address 2.2.2.89
+                    originated-qos-marking "nc1"
+                    no shutdown
+                exit
+                subscription "PS_SROS_VOQSTATS" create
+                    destination-group "GNMIC_ONE"
+                    encoding json-ietf
+                    mode sample
+                    sample-interval 60000
+                    sensor-group "SG_VOQSTATS"
+                    local-source-address 2.2.2.89
+                    originated-qos-marking "nc1"
+                    no shutdown
+                exit
+                subscription "PS_SROS_OPTICS" create
+                    destination-group "GNMIC_ONE"
+                    encoding json-ietf
+                    mode sample
+                    sample-interval 60000
+                    sensor-group "SG_OPTICS"
+                    local-source-address 2.2.2.89
+                    originated-qos-marking "nc1"
+                    no shutdown
+                exit
+                subscription "PS_SROS_CPU" create
+                    destination-group "GNMIC_ONE"
+                    encoding json-ietf
+                    mode sample
+                    sample-interval 60000
+                    sensor-group "SG_CPU"
+                    local-source-address 2.2.2.89
+                    originated-qos-marking "nc1"
+                    no shutdown
+                exit
+                subscription "PS_SROS_MEM" create
+                    destination-group "GNMIC_ONE"
+                    encoding json-ietf
+                    mode sample
+                    sample-interval 60000
+                    sensor-group "SG_MEM"
+                    local-source-address 2.2.2.89
+                    originated-qos-marking "nc1"
+                    no shutdown
+                exit
+                subscription "PS_SROS_SAP" create
+                    destination-group "GNMIC_ONE"
+                    encoding json-ietf
+                    mode sample
+                    sample-interval 60000
+                    sensor-group "SG_SAP"
+                    local-source-address 2.2.2.89
+                    originated-qos-marking "nc1"
+                    no shutdown
+                exit
+            exit
+
+
+
+# [root@grafana2 gnmic]# gnmic listen -a 100.64.10.126:57400 --skip-verify -e json_ietf --format event     
+
