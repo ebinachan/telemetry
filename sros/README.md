@@ -12,6 +12,7 @@ Sample sensor list:
 /state/port[port-id=*]/statistics/out-errors
 /state/port[port-id=*]/statistics/out-octets
 /state/port[port-id=*]/statistics/out-packets
+/state/port[port-id=*]/ethernet/oper-state-change-count
 
 /state/port[port-id=*]/transceiver/digital-diagnostic-monitoring/temperature/current
 /state/port[port-id=*]/transceiver/digital-diagnostic-monitoring/transmit-output-power/current
