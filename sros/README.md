@@ -37,6 +37,9 @@ Sample sensor list:
 /state/card[slot-number=*]/resource-usage/sap/allocated
 /state/card[slot-number=*]/resource-usage/sap/free
 
+/state/service/vpls[service-name=*]/stp
+/state/service/vpls[service-name=*]/sap[sap-id=*]/topology-change-bit
+
 # "/state/card/fp/statistics"
 
 ```
