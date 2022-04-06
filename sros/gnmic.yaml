@@ -24,6 +24,7 @@ processors:
         - ".*free$"
         - ".*errors$"
         - ".*discards$"
+        - ".*count$"
       type: int
   convert_float:
     event-convert:
