@@ -25,6 +25,8 @@ processors:
         - ".*errors$"
         - ".*discards$"
         - ".*count$"
+        - ".*available-memory$"
+        - ".*total-in-use$"
       type: int
   convert_float:
     event-convert:
