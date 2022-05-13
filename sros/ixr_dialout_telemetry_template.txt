@@ -63,9 +63,13 @@
                 sensor-group "SG_CPU" create
                     path "/state/card/cpu/summary/busiest-core-utilization/cpu-usage" create
                     exit
+                    path "/state/cpm/cpu/summary/busiest-core-utilization/cpu-usage" create
+                    exit
                 exit
                 sensor-group "SG_MEM" create
                     path "/state/card/memory-pools/summary" create
+                    exit
+                    path "/state/cpm/memory-pools/summary" create
                     exit
                 exit
                 sensor-group "SG_SAP" create

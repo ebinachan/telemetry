@@ -31,8 +31,10 @@ Sample sensor list:
 /state/port[port-id=*]/egress/voq[queue-id=*]/drop-packets
 
 /state/card[slot-number=*]/cpu[sample-period=*]/summary/busiest-core-utilization/cpu-usage
+/state/cpm[cpm-slot=*]/cpu[sample-period=*]/summary/busiest-core-utilization/cpu-usage
 
 /state/card[slot-number=*]/memory-pools/summary
+/state/cpm[cpm-slot=*]/memory-pools/summary
 
 /state/card[slot-number=*]/resource-usage/sap/allocated
 /state/card[slot-number=*]/resource-usage/sap/free
