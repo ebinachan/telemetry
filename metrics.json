@@ -993,6 +993,81 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-sysadmin-asr9k-envmon-ui:environment/oper/temperatures/location/sensor_attributes",
+        "spec": {
+            "fields": [
+                {
+                    "name": "location",
+                    "tag": true
+                },
+                {
+                    "name": "sensor",
+                    "tag": true
+                },
+                {
+                    "name": "value"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-sysadmin-asr9k-envmon-ui:environment/oper/fan/location/fan_attributes",
+        "spec": {
+            "fields": [
+                {
+                    "name": "location",
+                    "tag": true
+                },
+                {
+                    "name": "logical-slot",
+                    "tag": true
+                },
+                {
+                    "name": "fans-speed"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-sysadmin-asr9k-envmon-ui:environment/oper/power/location/pem_attributes",
+        "spec": {
+            "fields": [
+                {
+                    "name": "location",
+                    "tag": true
+                },
+                {
+                    "name": "pem",
+                    "tag": true
+                },
+                {
+                    "name": "usable-power-capacity"
+                },
+                {
+                    "name": "protection-power-capacity"
+                },
+                {
+                    "name": "power-resrv-and-alloc"
+                },
+                {
+                    "name": "system-power-used"
+                },
+                {
+                    "name": "system-power-input"
+                },
+                {
+                    "name": "power-allocated"
+                },
+                {
+                    "name": "power-consumed"
+                },
+                {
+                    "name": "power-status"
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/output/service-policy-names/service-policy-instance/statistics",
         "spec": {
             "fields": [
@@ -1121,6 +1196,23 @@
     },
     {
         "basepath": "Cisco-IOS-XR-nto-misc-shmem-oper:memory-summary/nodes/node/summary",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "system-ram-memory"
+                },
+                {
+                    "name": "free-application-memory"
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-nto-misc-oper:memory-summary/nodes/node/summary",
         "spec": {
             "fields": [
                 {
