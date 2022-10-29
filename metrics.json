@@ -116,6 +116,92 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-fib-common-oper:fib-statistics/nodes/node/drops",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "no-route-packets"
+                },
+                {
+                    "name": "punt-unreachable-packets"
+                },
+                {
+                    "name": "df-unreachable-packets"
+                },
+                {
+                    "name": "encapsulation-failure-packets"
+                },
+                {
+                    "name": "incomplete-adjacency-packets"
+                },
+                {
+                    "name": "unresolved-prefix-packets"
+                },
+                {
+                    "name": "unsupported-feature-packets"
+                },
+                {
+                    "name": "discard-packets"
+                },
+                {
+                    "name": "checksum-error-packets"
+                },
+                {
+                    "name": "fragmenation-consumed-packets"
+                },
+                {
+                    "name": "fragmenation-failure-packets"
+                },
+                {
+                    "name": "null-packets"
+                },
+                {
+                    "name": "rpf-check-failure-packets"
+                },
+                {
+                    "name": "acl-in-rpf-packets"
+                },
+                {
+                    "name": "rp-destination-drop-packets"
+                },
+                {
+                    "name": "total-number-of-drop-packets"
+                },
+                {
+                    "name": "mpls-disabled-interface"
+                },
+                {
+                    "name": "gre-lookup-failed-drop"
+                },
+                {
+                    "name": "gre-error-drop"
+                },
+                {
+                    "name": "lisp-punt-drops"
+                },
+                {
+                    "name": "lisp-encap-error-drops"
+                },
+                {
+                    "name": "lisp-decap-error-drops"
+                },
+                {
+                    "name": "multi-label-drops"
+                },
+                {
+                    "name": "unreachable-sr-label-drops"
+                },
+                {
+                    "name": "ttl-expired-sr-label-drops"
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-l2vpn-oper:l2vpnv2/active/bridge-summary",
         "spec": {
             "fields": [
@@ -1293,6 +1379,37 @@
                                     "name": "count"
                                 }
                             ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "basepath": "Cisco-IOS-XR-asr9k-fsi-oper:fabric-stats/nodes/node/statses/stats/stats-array",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "type",
+                    "tag": true
+                },
+                {
+                    "name": "stat-table-name",
+                    "tag": true
+                },
+                {
+                    "name": "stats-table",
+                    "fields": [
+                        {
+                            "name": "counter-name",
+                            "tag": true
+                        },
+                        {
+                            "name": "count"
                         }
                     ]
                 }
