@@ -35,6 +35,10 @@ telemetry model-driven
  !
  sensor-group SG5MINS
   sensor-path Cisco-IOS-XR-asr9k-sc-envmon-oper:environmental-monitoring/racks/rack/slots/slot/modules/module/sensor-types/sensor-type[type='temp']/sensor-names/sensor-name/value-detailed
+  sensor-path Cisco-IOS-XR-shellutil-oper:system-time/uptime
+  sensor-path Cisco-IOS-XR-sysadmin-asr9k-envmon-ui:environment/oper/fan/location/fan_attributes
+  sensor-path Cisco-IOS-XR-sysadmin-asr9k-envmon-ui:environment/oper/power/location/pem_attributes
+  sensor-path Cisco-IOS-XR-sysadmin-asr9k-envmon-ui:environment/oper/temperatures/location/sensor_attributes/value
  !
  sensor-group SG_OPTICS
   sensor-path Cisco-IOS-XR-controller-optics-oper:optics-oper/optics-ports/optics-port[name='Optics0/3/0/0']/optics-info
@@ -44,6 +48,7 @@ telemetry model-driven
   sensor-path Cisco-IOS-XR-pmengine-oper:performance-management/dwdm/dwdm-ports/dwdm-port[name='dwdm0/2/0/20/0']/dwdm-current/dwdm-minute15/dwdm-minute15-optics/dwdm-minute15-optic
  !
  sensor-group SG_GENERAL
+  sensor-path Cisco-IOS-XR-fib-common-oper:fib-statistics/nodes/node/drops
   sensor-path Cisco-IOS-XR-flowspec-oper:flow-spec/summary
   sensor-path Cisco-IOS-XR-flowspec-oper:flow-spec/vrfs/vrf/afs/af/flows/flow
   sensor-path Cisco-IOS-XR-ethernet-cfm-oper:cfm/nodes/node[node="0/RSP0/CPU0"]/summary
