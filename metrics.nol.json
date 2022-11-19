@@ -1722,6 +1722,68 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-aaa-protocol-radius-oper:radius/nodes/node/servergroups/servergroup",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "server-group-name",
+                    "tag": true
+                },
+                {
+                    "name": "server-ipaddress",
+                    "tag": true
+                },
+                {
+                    "name": "authentication",
+                    "fields": [
+                        {
+                            "name": "access-requests"
+                        },
+                        {
+                            "name": "access-accepts"
+                        },
+                        {
+                            "name": "access-rejects"
+                        },
+                        {
+                            "name": "access-request-retransmits"
+                        },
+                        {
+                            "name": "bad-access-responses"
+                        },
+                        {
+                            "name": "access-timeouts"
+                        }
+                    ]
+                },
+                {
+                    "name": "accounting",
+                    "fields": [
+                        {
+                            "name": "requests"
+                        },
+                        {
+                            "name": "responses"
+                        },
+                        {
+                            "name": "retransmits"
+                        },
+                        {
+                            "name": "bad-responses"
+                        },
+                        {
+                            "name": "timeouts"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-subscriber-pppoe-ma-oper:pppoe/access-interface-statistics/access-interface-statistic",
         "spec": {
             "fields": [
