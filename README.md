@@ -56,6 +56,8 @@ telemetry model-driven
   sensor-path Cisco-IOS-XR-l2vpn-oper:l2vpnv2/active/xconnect-summary
   sensor-path Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization
   sensor-path Cisco-IOS-XR-nto-misc-shmem-oper:memory-summary/nodes/node/summary
+  sensor-path Cisco-IOS-XR-aaa-protocol-radius-oper:radius/nodes/node/servergroups/servergroup[server-group-name='RADD']/accounting
+  sensor-path Cisco-IOS-XR-aaa-protocol-radius-oper:radius/nodes/node/servergroups/servergroup[server-group-name='RADD']/authentication
   sensor-path Cisco-IOS-XR-subscriber-pppoe-ma-oper:pppoe/nodes/node/summary-total
   sensor-path Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/statistics-global
   sensor-path Cisco-IOS-XR-asr9k-lpts-oper:platform-lptsp-ifib/nodes/node/police/police-info
