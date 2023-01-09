@@ -3,6 +3,7 @@
 
 Sample sensor list:
 
+
 ```
 /state/port[port-id=*]/statistics/in-discards
 /state/port[port-id=*]/statistics/in-errors
@@ -36,6 +37,9 @@ Sample sensor list:
 /state/card[slot-number=*]/memory-pools/summary
 /state/cpm[cpm-slot=*]/memory-pools/summary
 
+#/state/card[slot-number=*]/hardware-data/temperature
+#/state/cpm[cpm-slot=*]/hardware-data/temperature
+
 /state/card[slot-number=*]/resource-usage/sap/allocated
 /state/card[slot-number=*]/resource-usage/sap/free
 
@@ -44,4 +48,32 @@ Sample sensor list:
 
 # "/state/card/fp/statistics"
 
+```
+
+```
+A:IXR_E# tools dump system telemetry expand-wildcard-path "/state/card/memory-pools/summary"
+
+===============================================================================
+Expanded paths
+===============================================================================
+/state/card[slot-number=*]/memory-pools/summary
+===============================================================================
+No. of paths: 1
+===============================================================================
+
+A:IXR_E# tools dump system telemetry expand-wildcard-path "/state/cpm/memory-pools/summary" 
+
+===============================================================================
+Expanded paths
+===============================================================================
+/state/cpm[cpm-slot=*]/memory-pools/summary
+===============================================================================
+No. of paths: 1
+===============================================================================
+```
+
+
+```
+cd /root/.config/gnmic
+nano .gnmic.yaml
 ```

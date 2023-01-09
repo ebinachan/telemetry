@@ -27,6 +27,7 @@ processors:
         - ".*count$"
         - ".*available-memory$"
         - ".*total-in-use$"
+        - ".*temperature$"
       type: int
   convert_float:
     event-convert:
