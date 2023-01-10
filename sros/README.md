@@ -40,6 +40,8 @@ Sample sensor list:
 #/state/card[slot-number=*]/hardware-data/temperature
 #/state/cpm[cpm-slot=*]/hardware-data/temperature
 
+/state/chassis[chassis-class=*][chassis-number=*]/fan[fan-slot=*]/speed
+
 /state/card[slot-number=*]/resource-usage/sap/allocated
 /state/card[slot-number=*]/resource-usage/sap/free
 
