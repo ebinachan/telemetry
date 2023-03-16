@@ -2061,6 +2061,37 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/vrfs/vrf/neighbors/neighbor",
+        "spec": {
+            "fields": [
+                {
+                    "name": "instance-name",
+                    "tag": true
+                },
+                {
+                    "name": "vrf-name",
+                    "tag": true
+                },
+                {
+                    "name": "neighbor-address",
+                    "tag": true
+                },
+                {
+                    "name": "af-data",
+                    "fields": [
+                        {
+                            "name": "af-name",
+                            "tag": true
+                        },
+                        {
+                            "name": "prefixes-accepted"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/rpki-server-list",
         "spec": {
             "fields": [
