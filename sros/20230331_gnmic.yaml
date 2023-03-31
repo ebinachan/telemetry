@@ -1,0 +1,76 @@
+processors:
+  source_trim:
+    event-strings:
+      #debug: true
+      #value-names:
+      tag-names:
+        - "source"
+      transforms:
+        - split:
+        #- replace:
+            apply-on: "value"
+            split-on: ":"
+            #old: ".*"
+            #new: "3"
+            join-with: ""
+            ignore-last: 1
+  convert_int:
+    event-convert:
+      value-names:
+        - "^/state/port/egress/voq/forward-octets$"
+        - "^/state/port/statistics/in-octets$"
+        - "^/state/port/statistics/out-octets$"
+        - "^/state/port/egress/voq/drop-packets$"
+        #- ".*total$"
+        - "^/state/card/resource-usage/sap/allocated$"
+        - "^/state/card/resource-usage/sap/free$"
+        - "^/state/port/statistics/in-errors$"
+        - "^/state/port/statistics/in-discards$"
+        - "^/state/port/statistics/out-discards$"
+        - "^/state/port/ethernet/oper-state-change-count$"
+        - "^/state/card/memory-pools/summary/available-memory$"
+        - "^/state/card/memory-pools/summary/current-total-size$"
+        - "^/state/card/memory-pools/summary/total-in-use$"
+        - "^/state/cpm/memory-pools/summary/available-memory$"
+        - "^/state/cpm/memory-pools/summary/current-total-size$"
+        - "^/state/cpm/memory-pools/summary/total-in-use$"
+        - "^/state/card/hardware-data/temperature$"
+        - "^/state/chassis/fan/speed$"
+      type: int
+  convert_float:
+    event-convert:
+      value-names:
+        - "^/state/port/transceiver/digital-diagnostic-monitoring/received-optical-power/current$"
+        - "^/state/port/transceiver/digital-diagnostic-monitoring/transmit-output-power/current$"
+        - "^/state/port/transceiver/digital-diagnostic-monitoring/temperature/current$"
+        - "^/state/port/transceiver/digital-diagnostic-monitoring/received-optical-power/low-alarm$"
+        - "^/state/card/cpu/summary/busiest-core-utilization/cpu-usage$"
+        - "^/state/cpm/cpu/summary/busiest-core-utilization/cpu-usage$"
+      type: float
+
+
+outputs:
+  #output1:
+    #type: file
+    #file-type: stdout
+    #event-processors:
+      #- source_trim
+      #- convert_int
+      #- convert_float
+  output2:
+    type: influxdb 
+    url: http://localhost:8086
+    bucket: telegraf/20_weeks
+    token: 
+    batch-size: 1000 
+    flush-timer: 4s
+    use-gzip: false
+    enable-tls: false
+    override-timestamps: false 
+    health-check-period: 30s 
+    debug: false 
+    event-processors:
+      - source_trim
+      - convert_int
+      - convert_float
+
