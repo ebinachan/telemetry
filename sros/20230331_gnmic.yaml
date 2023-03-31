@@ -17,10 +17,10 @@ processors:
   convert_int:
     event-convert:
       value-names:
-        - "^/state/port/egress/voq/forward-octets$"
-        - "^/state/port/statistics/in-octets$"
-        - "^/state/port/statistics/out-octets$"
-        - "^/state/port/egress/voq/drop-packets$"
+        #- "^/state/port/egress/voq/forward-octets$"
+        #- "^/state/port/statistics/in-octets$"
+        #- "^/state/port/statistics/out-octets$"
+        #- "^/state/port/egress/voq/drop-packets$"
         #- ".*total$"
         - "^/state/card/resource-usage/sap/allocated$"
         - "^/state/card/resource-usage/sap/free$"
@@ -40,6 +40,10 @@ processors:
   convert_float:
     event-convert:
       value-names:
+        - "^/state/port/egress/voq/forward-octets$"
+        - "^/state/port/statistics/in-octets$"
+        - "^/state/port/statistics/out-octets$"
+        - "^/state/port/egress/voq/drop-packets$"
         - "^/state/port/transceiver/digital-diagnostic-monitoring/received-optical-power/current$"
         - "^/state/port/transceiver/digital-diagnostic-monitoring/transmit-output-power/current$"
         - "^/state/port/transceiver/digital-diagnostic-monitoring/temperature/current$"
