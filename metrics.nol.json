@@ -35,7 +35,57 @@
                                     ]
                                 },
                                 {
+                                    "name": "imposition-stats",
+                                    "fields": [
+                                        {
+                                            "name": "imposition-mtu-drop",
+                                            "fields": [
+                                                {
+                                                    "name": "packet-counts"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
                                     "name": "dispostion-stats",
+                                    "fields": [
+                                        {
+                                            "name": "mac-move",
+                                            "fields": [
+                                                {
+                                                    "name": "packet-counts"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "multicast-drop",
+                                            "fields": [
+                                                {
+                                                    "name": "packet-counts"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "unicast-drop",
+                                            "fields": [
+                                                {
+                                                    "name": "packet-counts"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "broadcast-drop",
+                                            "fields": [
+                                                {
+                                                    "name": "packet-counts"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "disposition-stats",
                                     "fields": [
                                         {
                                             "name": "mac-move",
