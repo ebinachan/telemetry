@@ -51,6 +51,12 @@
                     exit
                 exit
                 sensor-group "SG_OPTICS" create
+                    path "/state/port/transceiver/digital-diagnostic-monitoring/lane/received-optical-power/current" create
+                    exit
+                    path "/state/port/transceiver/digital-diagnostic-monitoring/lane/received-optical-power/low-alarm" create
+                    exit
+                    path "/state/port/transceiver/digital-diagnostic-monitoring/lane/transmit-output-power/current" create
+                    exit
                     path "/state/port/transceiver/digital-diagnostic-monitoring/temperature/current" create
                     exit
                     path "/state/port/transceiver/digital-diagnostic-monitoring/transmit-output-power/current" create
