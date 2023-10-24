@@ -1230,6 +1230,9 @@
                                 },
                                 {
                                     "name": "total-transmit-rate"
+                                },
+                                {
+                                    "name": "match-data-rate"
                                 }
                             ]
                         },
