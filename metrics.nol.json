@@ -1159,7 +1159,12 @@
                     "tag": true
                 },
                 {
-                    "name": "fans-speed"
+                    "name": "fans-speed",
+                    "fields": [
+                        {
+                            "name": "value"
+                        }
+                    ]
                 }
             ]
         }
