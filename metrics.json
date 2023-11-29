@@ -129,6 +129,31 @@
         }
     },
     {
+        "basepath": "Cisco-IOS-XR-nto-misc-shprocmem-oper:processes-memory/nodes/node/job-ids/job-id",
+        "spec": {
+            "fields": [
+                {
+                    "name": "node-name",
+                    "tag": true
+                },
+                {
+                    "name": "job-id",
+                    "tag": true
+                },
+                {
+                    "name": "name",
+                    "tag": true
+                },
+                {
+                    "name": "malloc-size"
+                },
+                {
+                    "name": "data-seg-size"
+                }
+            ]
+        }
+    },
+    {
         "basepath": "Cisco-IOS-XR-l2vpn-oper:l2vpnv2/active/xconnect-summary",
         "spec": {
             "fields": [
@@ -418,28 +443,6 @@
                             ]
                         }
                     ]
-                }
-            ]
-        }
-    },
-    {
-        "basepath": "Cisco-IOS-XR-nto-misc-shprocmem-oper:processes-memory/nodes/node/job-ids/job-id",
-        "spec": {
-            "fields": [
-                {
-                    "name": "node-name",
-                    "tag": true
-                },
-                {
-                    "name": "job-id",
-                    "tag": true
-                },
-                {
-                    "name": "name",
-                    "tag": true
-                },
-                {
-                    "name": "malloc-size"
                 }
             ]
         }
