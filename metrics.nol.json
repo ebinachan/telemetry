@@ -1331,10 +1331,6 @@
                     "tag": true
                 },
                 {
-                    "name": "pid",
-                    "tag": true
-                },
-                {
                     "name": "text-seg-size"
                 },
                 {
