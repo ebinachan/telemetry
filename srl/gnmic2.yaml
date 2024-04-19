@@ -89,6 +89,8 @@ subscriptions:
   srl_bgp_stats:
     paths:
       - /network-instance[name=*]/protocols/bgp/statistics
+      - /network-instance[name=*]/protocols/bgp/afi-safi[afi-safi-name=*]/active-routes
+      - /network-instance[name=*]/protocols/bgp/afi-safi[afi-safi-name=*]/received-routes
     mode: stream
     stream-mode: sample
     sample-interval: 60s
@@ -97,6 +99,20 @@ subscriptions:
     paths:
       - /network-instance[name=*]/protocols/bgp/neighbor[peer-address=*]/afi-safi[afi-safi-name=*]/received-routes
       - /network-instance[name=*]/protocols/bgp/neighbor[peer-address=*]/afi-safi[afi-safi-name=*]/sent-routes
+    mode: stream
+    stream-mode: sample
+    sample-interval: 60s
+
+  srl_aaa_stats:
+    paths:
+      - /system/aaa/server-group[name=*]/server[address=*]/statistics
+    mode: stream
+    stream-mode: sample
+    sample-interval: 60s
+
+  srl_eventhandler_stats:
+    paths:
+      - /system/event-handler/instance[name=*]/statistics
     mode: stream
     stream-mode: sample
     sample-interval: 60s
