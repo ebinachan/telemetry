@@ -10,10 +10,7 @@ targets:
   100.64.10.151:57400:
   100.64.10.152:57400:
     #subscriptions:
-      #- srl_if_oper_state
-      #- srl_net_instance
       #- srl_if_stats
-      #- srl_if_traffic_rate
       #- srl_cpu
       #- srl_mem
       #- srl_bgp_stats
@@ -70,6 +67,14 @@ subscriptions:
   srl_mem:
     paths:
       - /platform/control[slot=*]/memory
+    mode: stream
+    stream-mode: sample
+    sample-interval: 60s
+
+  srl_bfd_stats:
+    paths:
+      - /bfd/total-bfd-sessions
+      - /bfd/total-unmatched-bfd-packets
     mode: stream
     stream-mode: sample
     sample-interval: 60s
@@ -142,6 +147,9 @@ subscriptions:
 # /interface[name=ethernet-1/*]/qos/output/queue[queue-name=*]/queue-depth
 # /platform/resource-management/unified-forwarding-resources
 
+#other, VA
+# /interface[name=ethernet-1/*]/oper-state
+
 
 processors:
   source_trim:
@@ -177,12 +185,26 @@ processors:
         - "^/state/cpm/memory-pools/summary/total-in-use$"
         - "^/state/card/hardware-data/temperature$"
         - "^/state/chassis/fan/speed$"
-        - "^/srl_nokia-platform:platform/srl_nokia-platform-fan:fan-tray/speed$"
-        - "^/srl_nokia-platform:platform/srl_nokia-platform-psu:power-supply/temperature/instant$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-chassis:chassis/power/total/capacity$"
         - "^/srl_nokia-platform:platform/srl_nokia-platform-chassis:chassis/power/total/peak$"
-        - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-tcam:tcam/resource/free-dynamic$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-chassis:chassis/power/total/used$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-fan:fan-tray/speed$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-psu:power-supply/input/current$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-psu:power-supply/input/power$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-psu:power-supply/input/voltage$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-psu:power-supply/temperature/instant$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-acl:acl/resource/free$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-acl:acl/resource/used$"
         - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-datapath-resources:datapath/asic/resource/free-entries$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-datapath-resources:datapath/asic/resource/used-entries$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-datapath-resources:datapath/asic/resource/used-percent$"
         - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-datapath-resources:datapath/xdp/resource/free-entries$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-datapath-resources:datapath/xdp/resource/used-entries$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-datapath-resources:datapath/xdp/resource/used-percent$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-tcam:tcam/resource/free-dynamic$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-tcam:tcam/resource/free-static$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-tcam:tcam/resource/programmed$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-tcam:tcam/resource/reserved$"
         #- ".*speed$"
         #- ".*usage$"
       type: int
@@ -199,8 +221,12 @@ processors:
         - "^/state/port/transceiver/digital-diagnostic-monitoring/received-optical-power/low-alarm$"
         - "^/state/card/cpu/summary/busiest-core-utilization/cpu-usage$"
         - "^/state/cpm/cpu/summary/busiest-core-utilization/cpu-usage$"
+        - "^/srl_nokia-interfaces:interface/srl_nokia-qos:qos/output/queue-statistics/queue/final-dropped-octets$"
+        - "^/srl_nokia-interfaces:interface/srl_nokia-qos:qos/output/queue-statistics/queue/final-dropped-packets$"
         - "^/srl_nokia-interfaces:interface/srl_nokia-qos:qos/output/queue-statistics/queue/transmitted-octets$"
+        - "^/srl_nokia-interfaces:interface/srl_nokia-qos:qos/output/queue-statistics/queue/transmitted-packets$"
         - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-qos:buffer-memory/free$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-qos:buffer-memory/reserved$"
         - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-qos:buffer-memory/used$"
         - "^/srl_nokia-network-instance:network-instance/bridge-table/srl_nokia-bridge-table-mac-table:statistics/active-entries$"
         - "^/srl_nokia-network-instance:network-instance/bridge-table/srl_nokia-bridge-table-mac-table:statistics/total-entries$"
@@ -209,8 +235,33 @@ processors:
         - "^/srl_nokia-platform:platform/srl_nokia-platform-control:control/srl_nokia-platform-memory:memory/utilization$"
         - "^/srl_nokia-platform:platform/srl_nokia-platform-control:control/srl_nokia-platform-memory:memory/reserved$"
         - "^/srl_nokia-platform:platform/srl_nokia-platform-control:control/srl_nokia-platform-memory:memory/physical$"
+        - "^/srl_nokia-interfaces:interface/statistics/carrier-transitions$"
+        - "^/srl_nokia-interfaces:interface/statistics/in-broadcast-packets$"
+        - "^/srl_nokia-interfaces:interface/statistics/in-discarded-packets$"
+        - "^/srl_nokia-interfaces:interface/statistics/in-error-packets$"
+        - "^/srl_nokia-interfaces:interface/statistics/in-fcs-error-packets$"
+        - "^/srl_nokia-interfaces:interface/statistics/in-multicast-packets$"
         - "^/srl_nokia-interfaces:interface/statistics/in-octets$"
+        - "^/srl_nokia-interfaces:interface/statistics/in-packets$"
+        - "^/srl_nokia-interfaces:interface/statistics/in-unicast-packets$"
+        - "^/srl_nokia-interfaces:interface/statistics/out-broadcast-packets$"
+        - "^/srl_nokia-interfaces:interface/statistics/out-discarded-packets$"
+        - "^/srl_nokia-interfaces:interface/statistics/out-error-packets$"
+        - "^/srl_nokia-interfaces:interface/statistics/out-mirror-octets$"
+        - "^/srl_nokia-interfaces:interface/statistics/out-mirror-packets$"
+        - "^/srl_nokia-interfaces:interface/statistics/out-multicast-packets$"
         - "^/srl_nokia-interfaces:interface/statistics/out-octets$"
+        - "^/srl_nokia-interfaces:interface/statistics/out-packets$"
+        - "^/srl_nokia-interfaces:interface/statistics/out-unicast-packets$"
+        - "^/srl_nokia-interfaces:interface/traffic-rate/in-bps$"
+        - "^/srl_nokia-interfaces:interface/traffic-rate/out-bps$"
+        - "^/bfd/total-bfd-sessions$"
+        - "^/bfd/total-unmatched-bfd-packets$"
+        - "^/srl_nokia-network-instance:network-instance/route-table/srl_nokia-ip-route-tables:ipv4-unicast/statistics/active-routes$"
+        - "^/srl_nokia-network-instance:network-instance/route-table/srl_nokia-ip-route-tables:ipv4-unicast/statistics/active-routes-with-ecmp$"
+        - "^/srl_nokia-network-instance:network-instance/route-table/srl_nokia-ip-route-tables:ipv4-unicast/statistics/fib-failed-routes$"
+        - "^/srl_nokia-network-instance:network-instance/route-table/srl_nokia-ip-route-tables:ipv4-unicast/statistics/resilient-hash-routes$"
+        - "^/srl_nokia-network-instance:network-instance/route-table/srl_nokia-ip-route-tables:ipv4-unicast/statistics/total-routes$"
         #- ".*entries$"
       type: float
 
@@ -239,3 +290,4 @@ outputs:
       - source_trim
       - convert_int
       - convert_float
+
