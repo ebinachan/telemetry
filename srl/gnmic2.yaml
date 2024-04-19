@@ -135,12 +135,15 @@ subscriptions:
     stream-mode: sample
     sample-interval: 60s
 
-  #srl_apps:
-    #paths:
-      #- /system/app-management/application[name=*]
-    #mode: stream
-    #stream-mode: sample
-    #sample-interval: 60s
+  srl_apps:
+    paths:
+      # - /system/app-management/application[name=*]
+      - /system/app-management/application[name=*]/statistics/restart-count
+      - /system/app-management/application[name=*]/oom-score-adj
+      - /system/app-management/application[name=*]/state
+    mode: stream
+    stream-mode: sample
+    sample-interval: 60s
 
 
 #other, current config only
@@ -205,6 +208,8 @@ processors:
         - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-tcam:tcam/resource/free-static$"
         - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-tcam:tcam/resource/programmed$"
         - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-tcam:tcam/resource/reserved$"
+        - "^/system/app-management/application[name=*]/statistics/restart-count$"
+        - "^/system/app-management/application[name=*]/oom-score-adj$"
         #- ".*speed$"
         #- ".*usage$"
       type: int
