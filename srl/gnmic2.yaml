@@ -43,6 +43,13 @@ subscriptions:
     stream-mode: sample
     sample-interval: 60s
 
+  srl_subif_stats:
+    paths:
+      - /interface[name=*]/subinterface[index=*]/statistics
+    mode: stream
+    stream-mode: sample
+    sample-interval: 60s
+
   srl_if_qos_out_qstats:
     paths:
       - /interface[name=ethernet-1/*]/qos/output/queue-statistics
@@ -258,6 +265,19 @@ processors:
         - "^/srl_nokia-interfaces:interface/statistics/out-octets$"
         - "^/srl_nokia-interfaces:interface/statistics/out-packets$"
         - "^/srl_nokia-interfaces:interface/statistics/out-unicast-packets$"
+        - "^/srl_nokia-interfaces:interface/subinterface/statistics/in-discarded-packets$"
+        - "^/srl_nokia-interfaces:interface/subinterface/statistics/in-forwarded-octets$"
+        - "^/srl_nokia-interfaces:interface/subinterface/statistics/in-forwarded-packets$"
+        - "^/srl_nokia-interfaces:interface/subinterface/statistics/in-matched-ra-packets$"
+        - "^/srl_nokia-interfaces:interface/subinterface/statistics/in-octets$"
+        - "^/srl_nokia-interfaces:interface/subinterface/statistics/in-packets$"
+        - "^/srl_nokia-interfaces:interface/subinterface/statistics/out-discarded-packets$"
+        - "^/srl_nokia-interfaces:interface/subinterface/statistics/out-forwarded-octets$"
+        - "^/srl_nokia-interfaces:interface/subinterface/statistics/out-forwarded-packets$"
+        - "^/srl_nokia-interfaces:interface/subinterface/statistics/out-octets$"
+        - "^/srl_nokia-interfaces:interface/subinterface/statistics/out-originated-octets$"
+        - "^/srl_nokia-interfaces:interface/subinterface/statistics/out-originated-packets$"
+        - "^/srl_nokia-interfaces:interface/subinterface/statistics/out-packets$"
         - "^/srl_nokia-interfaces:interface/traffic-rate/in-bps$"
         - "^/srl_nokia-interfaces:interface/traffic-rate/out-bps$"
         - "^/bfd/total-bfd-sessions$"
