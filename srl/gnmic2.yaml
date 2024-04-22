@@ -175,6 +175,12 @@ subscriptions:
 
 #other, VA
 # /interface[name=ethernet-1/*]/oper-state
+# /tunnel/vxlan-tunnel/statistics
+# /tunnel/vxlan-tunnel/vtep[address=*]/statistics
+# /tunnel-interface[name=*]/vxlan-interface[index=*]/bridge-table/unicast-destinations/destination[vtep=*][vni=*]/statistics
+# /tunnel-interface[name=*]/vxlan-interface[index=*]/bridge-table/unicast-destinations/es-destination[esi=*]/statistics
+#
+# ToDo
 
 
 processors:
@@ -306,6 +312,11 @@ processors:
         - "^/srl_nokia-network-instance:network-instance/route-table/srl_nokia-ip-route-tables:ipv4-unicast/statistics/fib-failed-routes$"
         - "^/srl_nokia-network-instance:network-instance/route-table/srl_nokia-ip-route-tables:ipv4-unicast/statistics/resilient-hash-routes$"
         - "^/srl_nokia-network-instance:network-instance/route-table/srl_nokia-ip-route-tables:ipv4-unicast/statistics/total-routes$"
+        - "^/srl_nokia-network-instance:network-instance/route-table/srl_nokia-ip-route-tables:ipv6-unicast/statistics/active-routes$"
+        - "^/srl_nokia-network-instance:network-instance/route-table/srl_nokia-ip-route-tables:ipv6-unicast/statistics/active-routes-with-ecmp$"
+        - "^/srl_nokia-network-instance:network-instance/route-table/srl_nokia-ip-route-tables:ipv6-unicast/statistics/fib-failed-routes$"
+        - "^/srl_nokia-network-instance:network-instance/route-table/srl_nokia-ip-route-tables:ipv6-unicast/statistics/resilient-hash-routes$"
+        - "^/srl_nokia-network-instance:network-instance/route-table/srl_nokia-ip-route-tables:ipv6-unicast/statistics/total-routes$"
         - "^/srl_nokia-network-instance:network-instance/protocols/srl_nokia-bgp:bgp/afi-safi/active-routes$"
         - "^/srl_nokia-network-instance:network-instance/protocols/srl_nokia-bgp:bgp/afi-safi/received-routes$"
         - "^/srl_nokia-network-instance:network-instance/protocols/srl_nokia-bgp:bgp/statistics/path-memory$"
@@ -313,6 +324,18 @@ processors:
         - "^/srl_nokia-network-instance:network-instance/protocols/srl_nokia-bgp:bgp/statistics/total-paths$"
         - "^/srl_nokia-network-instance:network-instance/protocols/srl_nokia-bgp:bgp/statistics/total-prefixes$"
         - "^/srl_nokia-network-instance:network-instance/protocols/srl_nokia-bgp:bgp/statistics/total-received-routes$"
+        - "^/srl_nokia-system:system/srl_nokia-aaa:aaa/server-group/server/statistics/accounting-connection-failures$"
+        - "^/srl_nokia-system:system/srl_nokia-aaa:aaa/server-group/server/statistics/accounting-rejects$"
+        - "^/srl_nokia-system:system/srl_nokia-aaa:aaa/server-group/server/statistics/accounting-success$"
+        - "^/srl_nokia-system:system/srl_nokia-aaa:aaa/server-group/server/statistics/authorization-connection-failures$"
+        - "^/srl_nokia-system:system/srl_nokia-aaa:aaa/server-group/server/statistics/authorization-rejects$"
+        - "^/srl_nokia-system:system/srl_nokia-aaa:aaa/server-group/server/statistics/authorization-success$"
+        - "^/srl_nokia-system:system/srl_nokia-aaa:aaa/server-group/server/statistics/login-connection-failures$"
+        - "^/srl_nokia-system:system/srl_nokia-aaa:aaa/server-group/server/statistics/login-rejects$"
+        - "^/srl_nokia-system:system/srl_nokia-aaa:aaa/server-group/server/statistics/login-success$"
+        - "^/srl_nokia-system:system/srl_nokia-event-handler:event-handler/instance/statistics/execution-count$"
+        - "^/srl_nokia-system:system/srl_nokia-event-handler:event-handler/instance/statistics/execution-successes$"
+        - "^/srl_nokia-system:system/srl_nokia-event-handler:event-handler/instance/statistics/upython-duration$"
         #- ".*entries$"
       type: float
 
