@@ -24,6 +24,8 @@ subscriptions:
       - /platform/power-supply[id=*]/input
       - /platform/power-supply[id=*]/temperature
       - /platform/chassis/power/total
+      - /platform/chassis/last-booted
+      - /platform/chassis/last-booted-reason
       - /platform/fan-tray[id=*]/speed
     mode: stream
     stream-mode: sample
@@ -122,6 +124,15 @@ subscriptions:
       - /network-instance[name=*]/bridge-table/statistics/active-entries
       - /network-instance[name=*]/bridge-table/statistics/total-entries
       - /network-instance[name=*]/bridge-table/statistics/failed-entries
+    mode: stream
+    stream-mode: sample
+    sample-interval: 60s
+
+  srl_vxlan_stats:
+    paths:
+      - /tunnel/vxlan-tunnel/statistics
+      - /tunnel/vxlan-tunnel/vtep[address=*]/statistics
+      - /tunnel-interface[name=*]/vxlan-interface[index=*]/bridge-table/statistics
     mode: stream
     stream-mode: sample
     sample-interval: 60s
@@ -303,6 +314,11 @@ processors:
         - "^/srl_nokia-interfaces:interface/subinterface/statistics/out-originated-octets$"
         - "^/srl_nokia-interfaces:interface/subinterface/statistics/out-originated-packets$"
         - "^/srl_nokia-interfaces:interface/subinterface/statistics/out-packets$"
+        - "^/srl_nokia-tunnel:tunnel/srl_nokia-vxlan-tunnel-vtep:vxlan-tunnel/statistics/in-discarded-packets$"
+        - "^/srl_nokia-tunnel:tunnel/srl_nokia-vxlan-tunnel-vtep:vxlan-tunnel/statistics/in-octets$"
+        - "^/srl_nokia-tunnel:tunnel/srl_nokia-vxlan-tunnel-vtep:vxlan-tunnel/statistics/in-packets$"
+        - "^/srl_nokia-tunnel:tunnel/srl_nokia-vxlan-tunnel-vtep:vxlan-tunnel/statistics/out-octets$"
+        - "^/srl_nokia-tunnel:tunnel/srl_nokia-vxlan-tunnel-vtep:vxlan-tunnel/statistics/out-packets$"
         - "^/srl_nokia-interfaces:interface/traffic-rate/in-bps$"
         - "^/srl_nokia-interfaces:interface/traffic-rate/out-bps$"
         - "^/srl_nokia-bfd:bfd/total-bfd-sessions$"
