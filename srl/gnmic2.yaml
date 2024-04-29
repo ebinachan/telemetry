@@ -31,6 +31,44 @@ subscriptions:
     stream-mode: sample
     sample-interval: 180s
 
+  srl_transceiver:
+    paths:
+      - /interface[name=ethernet-1/*]/transceiver/input-power
+      - /interface[name=ethernet-1/*]/transceiver/output-power
+      - /interface[name=ethernet-1/*]/transceiver/temperature
+      - /interface[name=ethernet-1/*]/transceiver/laser-bias-current
+      - /interface[name=ethernet-1/*]/transceiver/voltage
+      - /interface[name=ethernet-1/*]/transceiver/channel[index=*]/input-power
+      - /interface[name=ethernet-1/*]/transceiver/channel[index=*]/output-power
+      - /interface[name=ethernet-1/*]/transceiver/channel[index=*]/laser-bias-current
+      #- /interface[name=ethernet-1/*]/transceiver/input-power/latest-value
+      #- /interface[name=ethernet-1/*]/transceiver/input-power/low-alarm-threshold
+      #- /interface[name=ethernet-1/*]/transceiver/input-power/low-warning-threshold
+      #- /interface[name=ethernet-1/*]/transceiver/output-power/latest-value
+      #- /interface[name=ethernet-1/*]/transceiver/output-power/low-alarm-threshold
+      #- /interface[name=ethernet-1/*]/transceiver/output-power/low-warning-threshold
+      #- /interface[name=ethernet-1/*]/transceiver/temperature/latest-value
+      #- /interface[name=ethernet-1/*]/transceiver/temperature/low-alarm-threshold
+      #- /interface[name=ethernet-1/*]/transceiver/temperature/low-warning-threshold
+      #- /interface[name=ethernet-1/*]/transceiver/laser-bias-current/latest-value
+      #- /interface[name=ethernet-1/*]/transceiver/laser-bias-current/low-alarm-threshold
+      #- /interface[name=ethernet-1/*]/transceiver/laser-bias-current/low-warning-threshold
+      #- /interface[name=ethernet-1/*]/transceiver/voltage/latest-value
+      #- /interface[name=ethernet-1/*]/transceiver/voltage/low-alarm-threshold
+      #- /interface[name=ethernet-1/*]/transceiver/voltage/low-warning-threshold
+      #- /interface[name=ethernet-1/*]/transceiver/channel[index=*]/input-power/latest-value
+      #- /interface[name=ethernet-1/*]/transceiver/channel[index=*]/input-power/low-alarm-threshold
+      #- /interface[name=ethernet-1/*]/transceiver/channel[index=*]/input-power/low-warning-threshold
+      #- /interface[name=ethernet-1/*]/transceiver/channel[index=*]/output-power/latest-value
+      #- /interface[name=ethernet-1/*]/transceiver/channel[index=*]/output-power/low-alarm-threshold
+      #- /interface[name=ethernet-1/*]/transceiver/channel[index=*]/output-power/low-warning-threshold
+      #- /interface[name=ethernet-1/*]/transceiver/channel[index=*]/laser-bias-current/latest-value
+      #- /interface[name=ethernet-1/*]/transceiver/channel[index=*]/laser-bias-current/low-alarm-threshold
+      #- /interface[name=ethernet-1/*]/transceiver/channel[index=*]/laser-bias-current/low-warning-threshold
+    mode: stream
+    stream-mode: sample
+    sample-interval: 60s
+
   srl_net_instance:
     paths:
       - /network-instance[name=*]/oper-state
@@ -352,6 +390,24 @@ processors:
         - "^/srl_nokia-system:system/srl_nokia-event-handler:event-handler/instance/statistics/execution-count$"
         - "^/srl_nokia-system:system/srl_nokia-event-handler:event-handler/instance/statistics/execution-successes$"
         - "^/srl_nokia-system:system/srl_nokia-event-handler:event-handler/instance/statistics/upython-duration$"
+        - "^/srl_nokia-interfaces:interface/transceiver/channel/input-power/latest-value$"
+        - "^/srl_nokia-interfaces:interface/transceiver/channel/input-power/high-alarm-threshold$"
+        - "^/srl_nokia-interfaces:interface/transceiver/channel/input-power/high-warning-threshold$"
+        - "^/srl_nokia-interfaces:interface/transceiver/channel/laser-bias-current/latest-value$"
+        - "^/srl_nokia-interfaces:interface/transceiver/channel/laser-bias-current/high-alarm-threshold$"
+        - "^/srl_nokia-interfaces:interface/transceiver/channel/laser-bias-current/high-warning-threshold$"
+        - "^/srl_nokia-interfaces:interface/transceiver/channel/output-power/latest-value$"
+        - "^/srl_nokia-interfaces:interface/transceiver/input-power/latest-value$"
+        - "^/srl_nokia-interfaces:interface/transceiver/input-power/high-alarm-threshold$"
+        - "^/srl_nokia-interfaces:interface/transceiver/input-power/high-warning-threshold$"
+        - "^/srl_nokia-interfaces:interface/transceiver/laser-bias-current/latest-value$"
+        - "^/srl_nokia-interfaces:interface/transceiver/laser-bias-current/high-alarm-threshold$"
+        - "^/srl_nokia-interfaces:interface/transceiver/laser-bias-current/high-warning-threshold$"
+        - "^/srl_nokia-interfaces:interface/transceiver/output-power/latest-value$"
+        - "^/srl_nokia-interfaces:interface/transceiver/temperature/latest-value$"
+        - "^/srl_nokia-interfaces:interface/transceiver/temperature/high-alarm-threshold$"
+        - "^/srl_nokia-interfaces:interface/transceiver/temperature/high-warning-threshold$"
+        - "^/srl_nokia-interfaces:interface/transceiver/voltage/latest-value$"
         #- ".*entries$"
       type: float
 
