@@ -189,6 +189,13 @@ subscriptions:
     stream-mode: sample
     sample-interval: 60s
 
+  srl_platform_control_process:
+    paths:
+      - /platform/control[slot=*]/process[pid=*]
+    mode: stream
+    stream-mode: sample
+    sample-interval: 60s
+
   srl_platform_fc_buffers:
     paths:
       - /platform/linecard[slot=*]/forwarding-complex[name=*]/buffer-memory
@@ -213,6 +220,7 @@ subscriptions:
       - /system/app-management/application[name=*]/statistics/restart-count
       - /system/app-management/application[name=*]/oom-score-adj
       - /system/app-management/application[name=*]/state
+      - /system/app-management/application[name=*]/pid
     mode: stream
     stream-mode: sample
     sample-interval: 60s
@@ -288,6 +296,7 @@ processors:
         - "^/srl_nokia-platform:platform/srl_nokia-platform-lc:linecard/forwarding-complex/srl_nokia-platform-tcam:tcam/resource/reserved$"
         - "^/srl_nokia-system:system/srl_nokia-app-mgmt:app-management/application/oom-score-adj$"
         - "^/srl_nokia-system:system/srl_nokia-app-mgmt:app-management/application/statistics/restart-count$"
+        - "^/srl_nokia-system:system/srl_nokia-app-mgmt:app-management/application/pid$"
         - "^/srl_nokia-network-instance:network-instance/protocols/srl_nokia-bgp:bgp/statistics/up-peers$"
         - "^/srl_nokia-network-instance:network-instance/protocols/srl_nokia-bgp:bgp/statistics/total-peers$"
         - "^/srl_nokia-network-instance:network-instance/protocols/srl_nokia-bgp:bgp/statistics/disabled-peers$"
@@ -408,6 +417,9 @@ processors:
         - "^/srl_nokia-interfaces:interface/transceiver/temperature/high-alarm-threshold$"
         - "^/srl_nokia-interfaces:interface/transceiver/temperature/high-warning-threshold$"
         - "^/srl_nokia-interfaces:interface/transceiver/voltage/latest-value$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-control:control/srl_nokia-platform-cpu:process/cpu-utilization$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-control:control/srl_nokia-platform-cpu:process/memory-usage$"
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-control:control/srl_nokia-platform-cpu:process/memory-utilization$"
         #- ".*entries$"
       type: float
 
