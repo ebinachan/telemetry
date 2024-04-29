@@ -241,6 +241,10 @@ subscriptions:
 
 
 processors:
+  mytags:
+    event-to-tag:
+      value-names:
+        - "^/srl_nokia-platform:platform/srl_nokia-platform-control:control/srl_nokia-platform-cpu:process/name$"
   source_trim:
     event-strings:
       #debug: true
@@ -445,6 +449,7 @@ outputs:
     health-check-period: 30s 
     debug: false 
     event-processors:
+      - mytags
       - source_trim
       - convert_int
       - convert_float
