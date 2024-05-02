@@ -19,7 +19,7 @@ encoding: json_ietf
 loader:
   type: file
   # path to the file
-  path: ./targets-config.yaml
+  path: /root/.config/gnmic/targets-config.yaml
   # watch interval at which the file
   # is read again to determine if a target was added or deleted.
   interval: 30s
