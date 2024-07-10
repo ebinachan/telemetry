@@ -1,10 +1,15 @@
-# telemetry
+### telemetry
+
+* New: SROS Sensors for dial-out telemetry with gNMIc.
+* New: SRLinux Sensors for dial-in telemetry with gNMIc.
+
+
 
 Updated metrics.json for Cisco's telemetry collector, Pipeline.
 
 Sample sensor list:
 
-```
+```bash
 telemetry model-driven
  destination-group PIPELINE1
   address-family ipv4 10.0.0.1 port 5432
