@@ -127,7 +127,7 @@ subscriptions:
 
   srl_cpu:
     paths:
-      - /platform/control[slot=*]/cpu[index=all]/total
+      - /platform/control[slot=*]/cpu[index=all]
     mode: stream
     stream-mode: sample
     sample-interval: 20s
@@ -183,6 +183,7 @@ subscriptions:
       - /network-instance[name=*]/bridge-table/statistics/active-entries
       - /network-instance[name=*]/bridge-table/statistics/total-entries
       - /network-instance[name=*]/bridge-table/statistics/failed-entries
+      - /network-instance[name=*]/bridge-table/mac-duplication/num-moves
     mode: stream
     stream-mode: sample
     sample-interval: 60s
@@ -326,6 +327,7 @@ processors:
         - "^/srl_nokia-network-instance:network-instance/protocols/srl_nokia-bgp:bgp/statistics/up-peers$"
         - "^/srl_nokia-network-instance:network-instance/protocols/srl_nokia-bgp:bgp/statistics/total-peers$"
         - "^/srl_nokia-network-instance:network-instance/protocols/srl_nokia-bgp:bgp/statistics/disabled-peers$"
+        - "^/srl_nokia-network-instance:network-instance/bridge-table/mac-duplication/num-moves$"
         #- ".*speed$"
         #- ".*usage$"
       type: int
