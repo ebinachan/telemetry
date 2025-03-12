@@ -5,7 +5,8 @@ port: 57400
 timeout: 10s
 encoding: json_ietf
 
-
+#troubleshoot with output1 (stdout) and --format event
+#gnmic subscribe --config /root/.config/gnmic/.gnmic2.yaml --format event
 #targets:
   #100.64.10.151:57400:
   #100.64.10.152:57400:
@@ -273,7 +274,7 @@ processors:
       #debug: true
       #value-names:
       tag-names:
-        - "source"
+        - "^source$"
       transforms:
         - split:
         #- replace:
@@ -457,6 +458,7 @@ outputs:
     #type: file
     #file-type: stdout
     #event-processors:
+      #- mytags
       #- source_trim
       #- convert_int
       #- convert_float
